@@ -92,7 +92,7 @@ textarea {
 .nav-link {
   border: 1px solid black;
   color: #ffffff !important;
-  font-weight: 100;
+  font-weight: 900;
   font-size: clamp(0.95rem, 0.45vw + 0.8rem, 1.15rem);
   margin: 0 26px;
   text-align: center;
@@ -255,18 +255,48 @@ footer li,
 
 /*introduzione*/
 
+.container-home {
+  max-width: 1440px;
+}
+
+.home-hero {
+  align-items: stretch;
+  margin: 3rem 0 0;
+  justify-content: center;
+  text-align: center;
+}
+
+.eyebrowHome,
+.sectionMiniTitle,
+.heroHighlightLabel {
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.eyebrowHome,
+.sectionMiniTitle {
+  margin-bottom: 1rem;
+  color: #5f5f5f;
+}
+
 .titoloPresentazione {
-  margin-top: 5rem;
+  margin-top: 0;
   margin-bottom: 1.5rem;
   font-family: "Manrope", sans-serif;
-  font-size:  3.5rem;
-  font-weight: 200;
-  white-space: nowrap;
+  font-size: clamp(2.35rem, 2.4vw + 1.5rem, 4.4rem);
+  font-weight: 300;
+  line-height: 1.02;
+  white-space: normal;
+  max-width: 22ch;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .elementor-divider-separator {
   display: block;
-  width: 30%;
+  width: min(30%, 190px);
   height: 1px;
   background-color: black;
   margin: 0 auto;
@@ -283,14 +313,26 @@ footer li,
 }
 
 .terzoLivello {
-  margin: 2rem;
   animation: opacyEffect 1.5s;
 }
 
 .testoPresentazione {
   font-size: 1.2rem;
-  margin: 2rem;
+  margin: 1.75rem 0 0;
   color: black;
+  line-height: 1.8;
+  max-width: 84ch;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.heroActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 2rem;
+  justify-content: center;
 }
 
 .linkScopri {
@@ -299,11 +341,13 @@ footer li,
   border: 1px solid black;
   padding: 1.2rem 3rem;
   color: black;
-  margin: 0 auto 2rem;
+  margin: 0;
   text-decoration: none;
   transition: all 0.5s ease;
-  width: 40%;
-  display: block;
+  width: fit-content;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
 }
 
@@ -311,6 +355,72 @@ footer li,
   background-color: black;
   color: white;
   border-color: white;
+}
+
+.homeStats {
+  margin: 1rem 0 4rem;
+}
+
+@media (min-width: 1200px) {
+  .home-hero,
+  .homeStats,
+  .homeSection,
+  .cards-container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+.statCard {
+  height: 100%;
+  padding: 1.8rem;
+  border: 1px solid #dddddd;
+  background-color: #fbfbfb;
+}
+
+.statNumber {
+  margin: 0 0 0.75rem;
+  font-size: clamp(2rem, 1.8vw + 1.4rem, 3rem);
+  font-weight: 700;
+  line-height: 1;
+}
+
+.statLabel {
+  margin: 0;
+  line-height: 1.6;
+  color: #4f4f4f;
+}
+
+.homeSection {
+  margin: 0 0 4rem;
+}
+
+.sectionTitle {
+  margin-bottom: 1rem;
+  font-size: clamp(1.9rem, 1.5vw + 1.4rem, 3rem);
+  font-weight: 600;
+  line-height: 1.15;
+}
+
+.sectionText {
+  max-width: 62ch;
+  margin: 0 auto 2rem;
+  line-height: 1.8;
+  color: #4f4f4f;
+}
+
+.sectorPills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.9rem;
+  justify-content: center;
+}
+
+.sectorPill {
+  padding: 0.85rem 1.15rem;
+  border: 1px solid #d6d6d6;
+  background-color: white;
+  font-size: 0.98rem;
 }
 
 /*cards*/
@@ -329,6 +439,7 @@ footer li,
 
 .cards-container {
   animation: fromD 1.5s ease;
+  margin-bottom: 4rem;
 }
 
 .cards-container div.col-12 {
@@ -398,6 +509,17 @@ footer li,
   border-radius: 25px;
 }
 
+.homeCta {
+  align-items: center;
+  padding: 2.5rem;
+  background-color: #f5f5f5;
+}
+
+.homeCtaActions {
+  display: flex;
+  justify-content: flex-start;
+}
+
 /******************* CHI SIAMO *******************/
 
 div.titolo-pagina.row {
@@ -441,6 +563,41 @@ div.titolo-pagina.row {
 }
 
 @media (max-width: 768px) {
+  .home-hero {
+    margin-top: 2rem;
+  }
+
+  .testoPresentazione {
+    font-size: 1.05rem;
+  }
+
+  .heroActions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .linkScopri {
+    width: 100%;
+  }
+
+  .heroHighlight {
+    margin-top: 1rem;
+  }
+
+  .homeStats,
+  .homeSection,
+  .cards-container {
+    margin-bottom: 3rem;
+  }
+
+  .homeCta {
+    padding: 1.5rem;
+  }
+
+  .homeCtaActions {
+    margin-top: 1rem;
+  }
+
   .immagine-settore {
     width: 30%;
   }
