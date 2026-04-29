@@ -3,11 +3,21 @@
 }*/
 
 ::selection {
-  color: white;     /* testo nero molto trasparente */
-  background: rgba(0, 0, 0, 0.745); /* sfondo quasi invisibile */
+  color: white;
+  /* testo nero molto trasparente */
+  background: rgba(0, 0, 0, 0.745);
+  /* sfondo quasi invisibile */
 }
 
 /******************* ELEMENTI COMUNI NELLE PAGINE *******************/
+
+body,
+button,
+input,
+select,
+textarea {
+  font-family: "Manrope", sans-serif;
+}
 
 /*NAVBAR*/
 .navbar {
@@ -94,7 +104,7 @@
 
 .nav-link:hover {
   color: #ced4da !important;
-  border-color:white;
+  border-color: white;
 }
 
 @media (min-width: 992px) and (max-width: 1200px) {
@@ -245,6 +255,23 @@ footer li,
 
 /*introduzione*/
 
+.titoloPresentazione {
+  margin-top: 5rem;
+  margin-bottom: 1.5rem;
+  font-family: "Manrope", sans-serif;
+  font-size:  3.5rem;
+  font-weight: 200;
+  white-space: nowrap;
+}
+
+.elementor-divider-separator {
+  display: block;
+  width: 30%;
+  height: 1px;
+  background-color: black;
+  margin: 0 auto;
+}
+
 @keyframes opacyEffect {
   from {
     opacity: 0;
@@ -267,21 +294,23 @@ footer li,
 }
 
 .linkScopri {
-  display: inline-block;
+  background-color: transparent;
   font-size: 1.2rem;
   border: 1px solid black;
   padding: 1.2rem 3rem;
   color: black;
-  margin-bottom: 2rem;
+  margin: 0 auto 2rem;
   text-decoration: none;
   transition: all 0.5s ease;
+  width: 40%;
+  display: block;
+  text-align: center;
 }
 
 .linkScopri:hover {
   background-color: black;
   color: white;
   border-color: white;
-  transform: scale(1.1);
 }
 
 /*cards*/
@@ -689,7 +718,7 @@ div.titolo-pagina.row {
   font-weight: 600;
 }
 
-.job-modal-section + .job-modal-section {
+.job-modal-section+.job-modal-section {
   margin-top: 1.5rem;
 }
 
@@ -878,7 +907,7 @@ div.titolo-pagina.row {
 
 .link_privacy_policy {
   color: black;
-  text-decoration:  none;
+  text-decoration: none;
   font-weight: 700;
 }
 
