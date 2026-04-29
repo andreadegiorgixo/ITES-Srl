@@ -9,6 +9,11 @@
   /* sfondo quasi invisibile */
 }
 
+.titolo-principale {
+  font-family: "Manrope", sans-serif;
+  font-weight: 900;
+}
+
 /******************* ELEMENTI COMUNI NELLE PAGINE *******************/
 
 body,
@@ -21,7 +26,7 @@ textarea {
 
 /*NAVBAR*/
 .navbar {
-  background-color: black !important;
+  background-color: rgb(0, 0, 0) !important;
   padding: 10px 20px;
   align-items: center;
 }
@@ -90,9 +95,9 @@ textarea {
 }
 
 .nav-link {
-  border: 1px solid black;
+  border: 1px solid transparent;
   color: #ffffff !important;
-  font-weight: 900;
+  font-weight: 300;
   font-size: clamp(0.95rem, 0.45vw + 0.8rem, 1.15rem);
   margin: 0 26px;
   text-align: center;
@@ -439,12 +444,12 @@ footer li,
 }
 
 .linkScopri {
-  background-color: transparent;
+  background-color: black;
   font-size: 1.2rem;
   border: 1px solid black;
   border-radius: 0 0 1.5rem 0;
   padding: 1.2rem 3rem;
-  color: black;
+  color: white;
   margin: 0;
   text-decoration: none;
   transition: all 0.5s ease;
@@ -456,9 +461,9 @@ footer li,
 }
 
 .linkScopri:hover {
-  background-color: black;
-  color: white;
-  border-color: white;
+  background-color: transparent;
+  color: black;
+  border-color: black;
 }
 
 .homeStats {
@@ -509,6 +514,151 @@ footer li,
   margin: 0 0 4rem;
 }
 
+.homeServices {
+  margin: 0 0 5rem;
+}
+
+.homeServices__content {
+  height: 100%;
+  padding: clamp(2rem, 3vw, 4rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.homeServices__title,
+.homeServices__text {
+  margin-left: 0;
+  margin-right: 0;
+  text-align: left;
+}
+
+.homeServices__title {
+  max-width: 12ch;
+}
+
+.homeServices__divider {
+  margin: 0 0 1.75rem;
+}
+
+.homeServices__text {
+  max-width: 56ch;
+  margin-top: 0;
+}
+
+.homeServices__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.9rem;
+  margin-top: 1rem;
+}
+
+.homeServices__actions {
+  margin-bottom: 0;
+}
+
+.homeServices__media {
+  position: relative;
+  height: 100%;
+  min-height: 420px;
+  margin: 0;
+  overflow: hidden;
+  background-color: black;
+}
+
+.homeServices__media::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.04) 0%, rgba(0, 0, 0, 0.35) 100%);
+}
+
+.homeServices__image {
+  width: 100%;
+  height: 100%;
+  min-height: 400px;
+  display: block;
+  object-fit: cover;
+}
+
+.homeCertifications {
+  margin: 0 0 5rem;
+  padding: 4rem 0 0;
+}
+
+.homeCertifications__panel {
+  padding: 0;
+}
+
+.homeCertifications__intro {
+  margin-bottom: 2.5rem;
+  text-align: center;
+}
+
+.homeCertifications__title {
+  max-width: 14ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.homeCertifications__divider {
+  margin-bottom: 1.75rem;
+}
+
+.homeCertifications__text {
+  max-width: 68ch;
+}
+
+.homeCertifications__grid {
+  margin-bottom: 1.5rem;
+}
+
+.homeCertificationCard {
+  height: 100%;
+  border: 1px solid #dddddd;
+  background-color: #fbfbfb;
+  overflow: hidden;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.homeCertificationCard:hover {
+  transform: translateY(-0.35rem);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+.homeCertificationCard__image {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  display: block;
+}
+
+.homeCertificationCard__body {
+  padding: 1.35rem 1.25rem 1.5rem;
+}
+
+.homeCertificationCard__code,
+.homeCertificationCard__label {
+  margin: 0;
+}
+
+.homeCertificationCard__code {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.homeCertificationCard__label {
+  margin-top: 0.65rem;
+  line-height: 1.6;
+  color: #4f4f4f;
+}
+
+.homeCertifications__actions {
+  justify-content: center;
+}
+
 .sectionText {
   max-width: 62ch;
   margin: 0 auto 2rem;
@@ -521,6 +671,13 @@ footer li,
   flex-wrap: wrap;
   gap: 0.9rem;
   justify-content: center;
+}
+
+.sectorPill:hover {
+  background-color: #f0f0f0;
+  border-color: #b3b3b3;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 .sectorPill {
@@ -744,6 +901,38 @@ div.titolo-pagina.row {
 @media (max-width: 768px) {
   .home-hero {
     margin-top: 2rem;
+  }
+
+  .homeServices {
+    margin-bottom: 4rem;
+  }
+
+  .homeServices__content {
+    padding: 2rem 1.5rem;
+  }
+
+  .homeServices__title,
+  .homeServices__text {
+    max-width: none;
+  }
+
+  .homeServices__media,
+  .homeServices__image {
+    min-height: 300px;
+  }
+
+  .homeCertifications {
+    padding-top: 3rem;
+    margin-bottom: 4rem;
+  }
+
+  .homeCertifications__panel {
+    padding: 0;
+  }
+
+  .homeCertifications__title,
+  .homeCertifications__text {
+    max-width: none;
   }
 
   .testoPresentazione {
@@ -982,6 +1171,7 @@ div.titolo-pagina.row {
   width: 100%;
   padding: 1.35rem 1.4rem;
   border: 1px solid black;
+  border-radius: 0 0 1.5rem 0;
   background-color: #f8f8f8;
   text-align: left;
   transition: transform 0.25s ease, background-color 0.25s ease, color 0.25s ease, box-shadow 0.25s ease;
