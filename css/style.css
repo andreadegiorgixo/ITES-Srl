@@ -520,7 +520,6 @@ footer li,
 
 .homeServices__content {
   height: 100%;
-  padding: clamp(2rem, 3vw, 4rem);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -583,9 +582,51 @@ footer li,
   object-fit: cover;
 }
 
+.homeTicker {
+  margin: 1rem 0 4rem;
+  overflow: hidden;
+  border-top: 1px solid #d8d8d8;
+  border-bottom: 1px solid #d8d8d8;
+  background-color: #f7f7f7;
+}
+
+.homeTicker__track {
+  width: max-content;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1rem 0;
+  white-space: nowrap;
+  animation: homeTickerScroll 18s linear infinite;
+}
+
+.homeTicker__text {
+  font-size: clamp(1rem, 0.8vw + 0.8rem, 1.35rem);
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #1e1e1e;
+}
+
+.homeTicker__separator {
+  width: 3.5rem;
+  height: 1px;
+  background-color: #9f9f9f;
+  transform: rotate(-18deg);
+}
+
+@keyframes homeTickerScroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-45%);
+  }
+}
+
 .homeCertifications {
   margin: 0 0 5rem;
-  padding: 4rem 0 0;
 }
 
 .homeCertifications__panel {
@@ -924,6 +965,20 @@ div.titolo-pagina.row {
   .homeCertifications {
     padding-top: 3rem;
     margin-bottom: 4rem;
+  }
+
+  .homeTicker {
+    margin: 0.5rem 0 3rem;
+  }
+
+  .homeTicker__track {
+    gap: 1rem;
+    padding: 0.85rem 0;
+    animation-duration: 14s;
+  }
+
+  .homeTicker__separator {
+    width: 2.25rem;
   }
 
   .homeCertifications__panel {
