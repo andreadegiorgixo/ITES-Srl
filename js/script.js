@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
   const logo = document.getElementById("logoBrand");
+  const siteNavbar = document.getElementById("siteNavbar");
   const cookieBanner = document.getElementById("cookieBanner");
   const acceptCookiesButton = document.getElementById("acceptCookies");
   const rejectCookiesButton = document.getElementById("rejectCookies");
@@ -14,6 +15,15 @@ document.addEventListener("DOMContentLoaded", function () {
     logo.addEventListener("click", function () {
       window.location.pathname = "index.html";
     });
+  }
+
+  if (siteNavbar && document.body.classList.contains("home-page")) {
+    function syncNavbarOnScroll() {
+      siteNavbar.classList.toggle("navbar-scrolled", window.scrollY > 0);
+    }
+
+    syncNavbarOnScroll();
+    window.addEventListener("scroll", syncNavbarOnScroll, { passive: true });
   }
 
   if (cookieBanner && acceptCookiesButton && rejectCookiesButton) {

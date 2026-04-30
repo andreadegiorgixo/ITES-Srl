@@ -29,6 +29,22 @@ textarea {
   background-color: rgb(0, 0, 0) !important;
   padding: 10px 20px;
   align-items: center;
+  transition: background-color 0.25s ease, box-shadow 0.25s ease;
+  z-index: 1030;
+}
+
+.home-page .navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: transparent !important;
+  box-shadow: none;
+}
+
+.home-page .navbar.navbar-scrolled {
+  background-color: rgb(0, 0, 0) !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
 }
 
 .navbar-toggler {
@@ -129,12 +145,40 @@ textarea {
 
 /* Offcanvas Menu */
 .offcanvas {
-  background-color: #343a40;
+  background-color: black !important;
   color: #ffffff;
 }
 
 .offcanvas-title {
   color: #ffffff;
+}
+
+.offcanvas .btn-close,
+.offcanvas-lg .btn-close {
+  filter: invert(1);
+}
+
+@media (max-width: 991.98px) {
+  .offcanvas-lg {
+    background-color: black !important;
+    color: #ffffff;
+    width: min(90Pivw, 480px) !important;
+  }
+
+  .offcanvas-lg .offcanvas-body {
+    padding: 1.5rem;
+  }
+
+  .offcanvas-lg .navbar-nav {
+    align-items: stretch;
+  }
+
+  .offcanvas-lg .nav-link {
+    margin: 0;
+    padding: 0.95rem 0 !important;
+    text-align: left;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  }
 }
 
 .numeroDiTelefono {
@@ -354,12 +398,47 @@ footer li,
 
 /*video*/
 
+.videoHero {
+  position: relative;
+}
+
+.videoHero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.28) 0%, rgba(0, 0, 0, 0.4) 100%);
+  pointer-events: none;
+}
+
 .video {
   width: 100%;
-  height: 52vh;
+  height: 100vh;
   object-fit: cover;
   display: block;
   filter: brightness(90%);
+}
+
+.videoHero__overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.85rem;
+  padding: 2rem;
+  text-align: center;
+}
+
+.videoHero__line {
+  font-family: Manrope, sans-serif;
+  font-size: 5vw;
+  font-weight: 900;
+  color: white;
+  max-height: 5vw;
+  letter-spacing: 1rem;
+  user-select: none;
 }
 
 /*introduzione*/
@@ -481,6 +560,7 @@ footer li,
 }
 
 @media (min-width: 1200px) {
+
   .home-hero,
   .homeStats,
   .homeSection,
@@ -591,13 +671,20 @@ footer li,
 }
 
 .homeTicker__track {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
   width: max-content;
+  will-change: transform;
+  animation: homeTickerScroll 24s linear infinite;
+}
+
+.homeTicker__group {
   display: flex;
   align-items: center;
   gap: 1.5rem;
+  flex-shrink: 0;
   padding: 1rem 0;
-  white-space: nowrap;
-  animation: homeTickerScroll 18s linear infinite;
 }
 
 .homeTicker__text {
@@ -621,7 +708,7 @@ footer li,
   }
 
   to {
-    transform: translateX(-45%);
+    transform: translateX(-50%);
   }
 }
 
@@ -972,9 +1059,12 @@ div.titolo-pagina.row {
   }
 
   .homeTicker__track {
+    animation-duration: 18s;
+  }
+
+  .homeTicker__group {
     gap: 1rem;
     padding: 0.85rem 0;
-    animation-duration: 14s;
   }
 
   .homeTicker__separator {
@@ -1065,22 +1155,6 @@ div.titolo-pagina.row {
 }
 
 /******************* CERTIFICAZIONI *******************/
-
-/*video e titolo*/
-
-.contenitoreVideo {
-  position: relative;
-  width: 100%;
-  height: auto;
-}
-
-.videoCertificazione {
-  width: 100%;
-  height: 60vh;
-  object-fit: cover;
-  display: block;
-  filter: brightness(30%);
-}
 
 /* TITOLO E PARAGRAFO */
 
