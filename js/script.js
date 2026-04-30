@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  if (siteNavbar && document.body.classList.contains("home-page")) {
+  if (siteNavbar) {
     function syncNavbarOnScroll() {
       siteNavbar.classList.toggle("navbar-scrolled", window.scrollY > 0);
     }

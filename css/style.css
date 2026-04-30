@@ -33,7 +33,7 @@ textarea {
   z-index: 1030;
 }
 
-.home-page .navbar {
+.navbar {
   position: fixed;
   top: 0;
   left: 0;
@@ -42,7 +42,7 @@ textarea {
   box-shadow: none;
 }
 
-.home-page .navbar.navbar-scrolled {
+.navbar.navbar-scrolled {
   background-color: rgb(0, 0, 0) !important;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
 }
@@ -471,7 +471,7 @@ footer li,
   margin-top: 0;
   margin-bottom: 1.5rem;
   font-family: Manrope, sans-serif;
-  font-size: clamp(2.35rem, 2.4vw + 1.5rem, 4.4rem);
+  font-size: 3rem;
   font-weight: 700;
   line-height: 1.02;
   white-space: normal;
