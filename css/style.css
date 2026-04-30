@@ -162,7 +162,7 @@ textarea {
   .offcanvas-lg {
     background-color: black !important;
     color: #ffffff;
-    width: min(85Pivw, 380px) !important;
+    width: 320px !important;
   }
 
   .offcanvas-lg .offcanvas-body {
