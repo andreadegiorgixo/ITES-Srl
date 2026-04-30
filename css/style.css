@@ -26,19 +26,15 @@ textarea {
 
 /*NAVBAR*/
 .navbar {
-  background-color: rgb(0, 0, 0) !important;
-  padding: 10px 20px;
-  align-items: center;
-  transition: background-color 0.25s ease, box-shadow 0.25s ease;
-  z-index: 1030;
-}
-
-.navbar {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   background-color: transparent !important;
+  padding: 10px 20px;
+  align-items: center;
+  transition: background-color 0.25s ease, box-shadow 0.25s ease;
+  z-index: 1030;
   box-shadow: none;
 }
 
@@ -149,10 +145,6 @@ textarea {
   color: #ffffff;
 }
 
-.offcanvas-title {
-  color: #ffffff;
-}
-
 .offcanvas .btn-close,
 .offcanvas-lg .btn-close {
   filter: invert(1);
@@ -181,20 +173,6 @@ textarea {
   }
 }
 
-.numeroDiTelefono {
-  color: black;
-  border: 2px solid black;
-  background-color: white;
-  padding: 1rem;
-}
-
-.numeroDiTelefono:hover {
-  color: white;
-  border: 2px solid white;
-  background-color: black;
-  cursor: pointer;
-}
-
 /*FOOTER*/
 
 .site-footer {
@@ -214,15 +192,6 @@ textarea {
 .site-footer__brand,
 .site-footer__section {
   min-width: 0;
-}
-
-.site-footer__logo {
-  margin: 0 0 0.75rem;
-  font-size: clamp(3rem, 4vw, 5rem);
-  font-weight: 800;
-  line-height: 0.9;
-  letter-spacing: 0.04em;
-  color: white;
 }
 
 .site-footer__logo-image {
@@ -268,33 +237,6 @@ textarea {
   margin-right: 0.35rem;
   font-weight: 700;
   color: rgba(255, 255, 255, 0.58);
-}
-
-.site-footer__socials {
-  display: flex;
-  gap: 0.75rem;
-  margin-bottom: 1.5rem;
-}
-
-.site-footer__social {
-  width: 3rem;
-  height: 3rem;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  background-color: white;
-  color: black;
-  font-size: 0.95rem;
-  font-weight: 700;
-  text-decoration: none;
-  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
-}
-
-.site-footer__social:hover {
-  background-color: rgba(255, 255, 255, 0.75);
-  color: black;
-  transform: translateY(-2px);
 }
 
 .site-footer__phone {
@@ -1017,8 +959,63 @@ div.titolo-pagina-chiSiamo.row {
   z-index: 1;
 }
 
+.about-page {
+  background-color: #fafafa;
+}
+
+.about-hero {
+  padding: 0 1rem;
+}
+
+.about-content {
+  max-width: 1180px;
+  padding-top: 4.5rem;
+  padding-bottom: 5rem;
+}
+
+.about-kicker {
+  margin-bottom: 1.2rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.about-title-main {
+  color: white;
+  font-size: clamp(3.2rem, 6vw, 4.8rem);
+}
+
+.about-section {
+  margin-bottom: 3.5rem;
+}
+
+.about-box {
+  background-color: white;
+  border: 1px solid #e5e5e5;
+  padding: 3rem;
+}
+
+.about-title {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  line-height: 1.08;
+}
+
+.about-text {
+  max-width: 72ch;
+  margin: 0;
+  font-size: 1.08rem;
+  line-height: 1.8;
+}
+
+.about-text--compact {
+  margin-bottom: 1rem;
+}
+
 .href-home {
   color: black;
+  font-weight: 700;
   transition: 0.3s ease;
 }
 
@@ -1028,6 +1025,7 @@ div.titolo-pagina-chiSiamo.row {
 
 .settori {
   padding-bottom: 4rem;
+  row-gap: 1rem;
 }
 
 .paragrafo {
@@ -1036,16 +1034,49 @@ div.titolo-pagina-chiSiamo.row {
 }
 
 .immagine-settore {
-  width: 6vw;
+  width: clamp(4rem, 5vw, 5.5rem);
 }
 
-.elenco-strategie {
-  display: block;
-  list-style-type: disc;
-  margin-block-start: 1em;
-  margin-block-end: 1em;
-  padding-inline-start: 40px;
-  unicode-bidi: isolate;
+.about-settore-card {
+  height: 100%;
+  padding: 2rem 1rem;
+  border: 1px solid #e5e5e5;
+  background-color: white;
+}
+
+.about-settore-card h3 {
+  margin-top: 1rem;
+  margin-bottom: 0;
+  font-size: 1.35rem;
+}
+
+.about-work-cards {
+  row-gap: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+.about-work-card {
+  height: 100%;
+  padding: 1.8rem;
+  border: 1px solid #e5e5e5;
+  background-color: white;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-work-card h3 {
+  margin: 0 0 0.85rem;
+  font-size: 1.35rem;
+}
+
+.about-work-card p {
+  margin: 0;
+  line-height: 1.8;
+  color: #333333;
+}
+
+.about-work-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.06);
 }
 
 @media (max-width: 768px) {
@@ -1143,13 +1174,22 @@ div.titolo-pagina-chiSiamo.row {
   .immagine-settore {
     width: 30%;
   }
+
+  .about-content {
+    padding-top: 3rem;
+    padding-bottom: 3.5rem;
+  }
+
+  .about-box {
+    padding: 2rem 1.5rem;
+  }
 }
 
 .settore-civile,
 .settore-industriale,
 .settore-militare,
 .settore-terziario {
-  transition: all 0.5s ease;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
   margin-top: 2rem;
   margin-bottom: 2rem;
 }
@@ -1158,7 +1198,8 @@ div.titolo-pagina-chiSiamo.row {
 .settore-industriale:hover,
 .settore-militare:hover,
 .settore-terziario:hover {
-  transform: scale(1.1);
+  transform: translateY(-6px);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.08);
 }
 
 .brochure {
