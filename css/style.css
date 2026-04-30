@@ -986,13 +986,35 @@ footer li,
 
 /******************* CHI SIAMO *******************/
 
-div.titolo-pagina.row {
+div.titolo-pagina-chiSiamo.row {
   --bs-gutter-x: 0;
 }
 
-.titolo-pagina {
-  height: 25rem;
-  background-color: black;
+.titolo-pagina-chiSiamo {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("../res/chi siamo/Immagine Team.jpg");
+  background-size: cover;
+  background-position: center;
+  isolation: isolate;
+  min-height: 50rem;
+  padding: 6rem 1.5rem;
+}
+
+.titolo-pagina-chiSiamo::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.28) 0%, rgba(0, 0, 0, 0.48) 100%);
+  z-index: -1;
+}
+
+.titolo-pagina-chiSiamo .col {
+  position: relative;
+  z-index: 1;
 }
 
 .href-home {
@@ -1027,6 +1049,12 @@ div.titolo-pagina.row {
 }
 
 @media (max-width: 768px) {
+  .titolo-pagina-chiSiamo {
+    min-height: 32rem;
+    padding: 4rem 1.25rem;
+    background-position: center top;
+  }
+
   .home-hero {
     margin-top: 2rem;
   }
@@ -1154,6 +1182,37 @@ div.titolo-pagina.row {
   border-color: white;
 }
 
+/******************* SERVIZI *******************/
+
+.titolo-pagina-servizi {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  --bs-gutter-x: 0;
+  background-image: url("../res/servizi/ImmagineServizi.jpg");
+  background-size: cover;
+  background-position: center;
+  filter: brightness(0.75);
+  isolation: isolate;
+  min-height: 50rem;
+  padding: 6rem 1.5rem;
+}
+
+.titolo-pagina-servizi::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.28) 0%, rgba(0, 0, 0, 0.48) 100%);
+  z-index: -1;
+}
+
+.titolo-pagina-servizi .col {
+  position: relative;
+  z-index: 1;
+}
+
 /******************* CERTIFICAZIONI *******************/
 
 /* TITOLO E PARAGRAFO */
@@ -1165,15 +1224,47 @@ div.titolo-pagina.row {
   margin-bottom: 2rem;
 }
 
-.titolo2 {
+.titolo-paginaCertificazioni {
+  position: relative;
+  overflow: hidden;
   display: flex;
-  flex-direction: column;
-  margin-bottom: 2rem;
+  align-items: center;
+  justify-content: center;
+  background-image: url("../res/certificazioni/ImmagineCertificazioni.jpg");
+  background-size: cover;
+  background-position: center;
+  isolation: isolate;
+  min-height: 50rem;
+  padding: 6rem 1.5rem;
 }
 
-.titolo-certificazioni {
-  width: 100%;
+.titolo-paginaCertificazioni::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.28) 0%, rgba(0, 0, 0, 0.48) 100%);
+  z-index: -1;
 }
+
+.titolo-paginaCertificazioni .col {
+  position: relative;
+  z-index: 1;
+}
+
+@media (max-width: 768px) {
+  .titolo-pagina-servizi {
+    min-height: 32rem;
+    padding: 4rem 1.25rem;
+    background-position: center top;
+  }
+
+  .titolo-paginaCertificazioni {
+    min-height: 32rem;
+    padding: 4rem 1.25rem;
+    background-position: center top;
+  }
+}
+
 
 .paragrafo-certificazioni {
   font-size: 1.5rem;
@@ -1252,6 +1343,34 @@ div.titolo-pagina.row {
 }
 
 /******************* LAVORA CON NOI *******************/
+
+.titolo-pagina {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  --bs-gutter-x: 0;
+  background-image: url("../res/lavora-con-noi/ImmagineLavoraConNoi.jpg");
+  background-size: cover;
+  background-position: center;
+  isolation: isolate;
+  min-height: 50rem;
+  padding: 6rem 1.5rem;
+}
+
+.titolo-pagina::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.28) 0%, rgba(0, 0, 0, 0.48) 100%);
+  z-index: -1;
+}
+
+.titolo-pagina .col {
+  position: relative;
+  z-index: 1;
+}
 
 .presentazione-lavoro {
   padding-bottom: 1.5rem;
@@ -1572,6 +1691,12 @@ div.titolo-pagina.row {
 }
 
 @media (max-width: 768px) {
+  .titolo-pagina {
+    min-height: 32rem;
+    padding: 4rem 1.25rem;
+    background-position: center top;
+  }
+
   .lavora-con-noi-layout {
     margin-top: 2.5rem;
   }
