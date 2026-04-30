@@ -18,13 +18,13 @@
 </head>
 
 <body>
-  <nav class="navbar sticky-top bg-body-tertiary navbar-expand-lg navbar-light">
+  <nav class="navbar sticky-top bg-body-tertiary navbar-expand-lg navbar-light" id="siteNavbar">
     <div class="container-fluid">
       <a class="navbar-brand d-flex align-items-center" href="../index.html">
         <img src="../res/Brend Logo.jpg" alt="Logo ITES" id="logoBrand" class="img-fluid" style="max-height: 50px" />
       </a>
 
-      <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse"
+      <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="offcanvas"
         data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
         aria-label="Toggle navigation">
         <span class="custom-toggler-line"></span>
@@ -32,24 +32,31 @@
         <span class="custom-toggler-line"></span>
       </button>
 
-      <div class="collapse navbar-collapse" id="navbarNavDropdown">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="../index.html">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="../html/chi-siamo.html">Chi siamo</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="../html/servizi.html">Servizi</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="../html/certificazioni.html">Certificazioni</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="../html/lavora-con-noi.html">Lavora con noi</a>
-          </li>
-        </ul>
+      <div class="offcanvas offcanvas-lg offcanvas-end" tabindex="-1" id="navbarNavDropdown"
+        aria-labelledby="navbarNavDropdownLabel">
+        <div class="offcanvas-header d-lg-none">
+          <img src="/res/Brend Logo.jpg" alt="Logo ITES" id="logoBrand" class="img-fluid" style="max-height: 50px" />
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="../index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../html/chi-siamo.html">Chi siamo</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../html/servizi.html">Servizi</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../html/certificazioni.html">Certificazioni</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../html/lavora-con-noi.html">Lavora con noi</a>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   </nav>
