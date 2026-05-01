@@ -75,7 +75,129 @@
     </div>
   </div>
 
-  
+  <main class="container contact-page-main">
+    <section class="contact-showcase">
+      <div class="contact-showcase__intro text-center">
+        <p class="contact-showcase__eyebrow">Contatti</p>
+        <h2 class="titolo2">Parliamo del tuo prossimo progetto</h2>
+        <p class="paragrafo contact-showcase__text">
+          ITES affianca aziende, enti e privati con soluzioni impiantistiche, tecnologiche e di sicurezza.
+          Se vuoi richiedere informazioni o fissare un confronto, qui trovi tutti i riferimenti utili.
+        </p>
+      </div>
+
+      <div class="contact-showcase__grid">
+        <article class="contact-card contact-card--address">
+          <span class="material-symbols-outlined contact-card__icon">map</span>
+          <h3 class="contact-card__title">Indirizzo</h3>
+          <p class="contact-card__text">
+            ITES S.r.l.<br />
+            Viale Magna Grecia, 144<br />
+            74121 Taranto (TA)
+          </p>
+          <a class="contact-card__link" href="https://maps.google.com/?q=Viale+Magna+Grecia+144+Taranto" target="_blank"
+            rel="noopener noreferrer">
+            Indicazioni
+            <span class="material-symbols-outlined contact-card__arrow">arrow_forward</span>
+          </a>
+        </article>
+
+        <article class="contact-card">
+          <span class="material-symbols-outlined contact-card__icon">call</span>
+          <h3 class="contact-card__title">Telefono</h3>
+          <p class="contact-card__text">+39 349 616 4584</p>
+          <a class="contact-card__link" href="tel:+393496164584">
+            Chiama
+            <span class="material-symbols-outlined contact-card__arrow">arrow_forward</span>
+          </a>
+        </article>
+
+        <article class="contact-card">
+          <span class="material-symbols-outlined contact-card__icon">mail</span>
+          <h3 class="contact-card__title">Email</h3>
+          <p class="contact-card__text">info@ites-srl.it</p>
+          <a class="contact-card__link" href="#formContatti">
+            Scrivici
+            <span class="material-symbols-outlined contact-card__arrow">arrow_forward</span>
+          </a>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <section class="contact-map-section" aria-label="Mappa sede ITES">
+    <div class="container-fluid px-0">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d48586.128631545245!2d17.209132709612692!3d40.43912386368506!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13471d1819a77b13%3A0x64f8f9a58d57dfcf!2sTaranto%20TA!5e0!3m2!1sit!2sit!4v1777650517700!5m2!1sit!2sit"
+        class="contact-map-section__frame" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </section>
+
+  <main class="container contact-page-main" id="formContatti">
+    <section class="formContatti" >
+      <form id="contactForm" class="application-form" action="../php/send-contact-form.php" method="POST"
+        enctype="multipart/form-data" data-success-message="Messaggio inviato con successo. Ti risponderemo al piu presto.">
+        <div class="row g-3">
+          <div class="col-12 col-md-6">
+            <label for="contactName" class="form-label">Nome e cognome</label>
+            <input type="text" class="form-control" id="contactName" name="contactName" placeholder="Marco Rossi"
+              required />
+          </div>
+
+          <div class="col-12 col-md-6">
+            <label for="contactPhone" class="form-label">Telefono</label>
+            <input type="tel" class="form-control" id="contactPhone" name="contactPhone"
+              placeholder="+39 000 000 0000" />
+          </div>
+
+          <div class="col-12">
+            <label for="contactEmail" class="form-label">Email</label>
+            <input type="email" class="form-control" id="contactEmail" name="contactEmail"
+              placeholder="marco.rossi@example.com" required />
+          </div>
+
+          <div class="col-12">
+            <label for="contactSubject" class="form-label">Oggetto</label>
+            <input type="text" class="form-control" id="contactSubject" name="contactSubject"
+              placeholder="Es. Richiesta informazioni su un servizio" required />
+          </div>
+
+          <div class="col-12">
+            <label for="contactAttachment" class="form-label">Allega un file</label>
+            <input type="file" class="form-control" id="contactAttachment" name="attachment"
+              accept=".pdf,.doc,.docx,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document" />
+          </div>
+
+          <div class="col-12">
+            <label for="contactMessage" class="form-label">Messaggio</label>
+            <textarea class="form-control" id="contactMessage" name="contactMessage" rows="7" required
+              placeholder="Scrivi qui la tua richiesta o le informazioni di cui hai bisogno."></textarea>
+          </div>
+        </div>
+
+        <div class="col-12 mt-3">
+          <div class="form-check contacts-consent">
+            <input class="form-check-input" type="checkbox" value="1" id="contact-consent" name="consent"
+              style="cursor: pointer" required />
+            <label class="form-check-label" for="contact-consent">
+              Acconsento al trattamento dei miei dati personali ai sensi
+              del GDPR. Scopri le nostre
+              <a href="policy-contatto.html" class="link_privacy_policy">Privacy Policy</a>.
+            </label>
+          </div>
+        </div>
+
+        <div class="application-form-actions">
+          <button type="submit" class="invio-mail">
+            Invia messaggio
+          </button>
+        </div>
+
+        <p id="contactFormStatus" class="application-form-status" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
 
   <footer class="site-footer">
     <div class="container site-footer__inner">

@@ -5,8 +5,12 @@ document.addEventListener("DOMContentLoaded", function () {
   const acceptCookiesButton = document.getElementById("acceptCookies");
   const rejectCookiesButton = document.getElementById("rejectCookies");
   const cookieConsentKey = "ites_cookie_consent";
-  const jobApplicationForm = document.getElementById("jobApplicationForm");
-  const jobApplicationStatus = document.getElementById("jobApplicationStatus");
+  const jobApplicationForm =
+    document.getElementById("jobApplicationForm") ||
+    document.getElementById("contactForm");
+  const jobApplicationStatus =
+    document.getElementById("jobApplicationStatus") ||
+    document.getElementById("contactFormStatus");
   const candidateRoleInput = document.getElementById("candidateRole");
   const jobOpportunityModal = document.getElementById("jobOpportunityModal");
   const jobApplicationSection = document.getElementById("jobApplicationSection");
@@ -155,6 +159,9 @@ document.addEventListener("DOMContentLoaded", function () {
       const formData = new FormData(jobApplicationForm);
       const submitButton = jobApplicationForm.querySelector('button[type="submit"]');
       const formEndpoint = (jobApplicationForm.getAttribute("action") || "").trim();
+      const successMessage =
+        jobApplicationForm.getAttribute("data-success-message") ||
+        "Candidatura inviata con successo. Ti contatteremo al piu presto.";
 
       if (!formEndpoint) {
         if (jobApplicationStatus) {
@@ -197,8 +204,7 @@ document.addEventListener("DOMContentLoaded", function () {
           jobApplicationForm.reset();
 
           if (jobApplicationStatus) {
-            jobApplicationStatus.textContent =
-              "Candidatura inviata con successo. Ti contatteremo al piu presto.";
+            jobApplicationStatus.textContent = successMessage;
             jobApplicationStatus.className = "application-form-status is-success";
           }
         } else {
