@@ -107,7 +107,7 @@ textarea {
 }
 
 .nav-link {
-  border: 1px solid transparent;
+  border-bottom: 1px solid transparent;
   color: #ffffff !important;
   font-weight: 300;
   font-size: clamp(0.95rem, 0.45vw + 0.8rem, 1.15rem);
@@ -942,7 +942,7 @@ div.titolo-pagina-chiSiamo.row {
   background-size: cover;
   background-position: center;
   isolation: isolate;
-  min-height: 50rem;
+  min-height: 30rem;
   padding: 6rem 1.5rem;
 }
 
@@ -967,239 +967,22 @@ div.titolo-pagina-chiSiamo.row {
   padding: 0 1rem;
 }
 
-.about-content {
-  max-width: 1180px;
-  padding-top: 4.5rem;
-  padding-bottom: 5rem;
-}
-
-.about-kicker {
-  margin-bottom: 1.2rem;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  font-size: 0.9rem;
-  font-weight: 700;
-}
-
 .about-title-main {
   color: white;
   font-size: clamp(3.2rem, 6vw, 4.8rem);
 }
 
-.about-section {
-  margin-bottom: 3.5rem;
+.logo-itesChiSiamo {
+  display: block;
+  max-width: 25%;
+  height: auto;
+  margin: 0 auto;
 }
 
-.about-box {
-  background-color: white;
-  border: 1px solid #e5e5e5;
-  padding: 3rem;
-}
-
-.about-title {
-  margin-bottom: 1rem;
-  font-size: 2rem;
-  line-height: 1.08;
-}
-
-.about-text {
-  max-width: 72ch;
-  margin: 0;
-  font-size: 1.08rem;
-  line-height: 1.8;
-}
-
-.about-text--compact {
-  margin-bottom: 1rem;
-}
-
-.href-home {
-  color: black;
-  font-weight: 700;
-  transition: 0.3s ease;
-}
-
-.href-home:hover {
-  color: gray;
-}
-
-.settori {
-  padding-bottom: 4rem;
-  row-gap: 1rem;
-}
-
-.paragrafo {
-  padding-left: 20px;
-  padding-right: 20px;
-}
-
-.immagine-settore {
-  width: clamp(4rem, 5vw, 5.5rem);
-}
-
-.about-settore-card {
-  height: 100%;
-  padding: 2rem 1rem;
-  border: 1px solid #e5e5e5;
-  background-color: white;
-}
-
-.about-settore-card h3 {
-  margin-top: 1rem;
-  margin-bottom: 0;
-  font-size: 1.35rem;
-}
-
-.about-work-cards {
-  row-gap: 1.5rem;
-  margin-top: 0.5rem;
-}
-
-.about-work-card {
-  height: 100%;
-  padding: 1.8rem;
-  border: 1px solid #e5e5e5;
-  background-color: white;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.about-work-card h3 {
-  margin: 0 0 0.85rem;
-  font-size: 1.35rem;
-}
-
-.about-work-card p {
-  margin: 0;
-  line-height: 1.8;
-  color: #333333;
-}
-
-.about-work-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.06);
-}
-
-@media (max-width: 768px) {
-  .titolo-pagina-chiSiamo {
-    min-height: 32rem;
-    padding: 4rem 1.25rem;
-    background-position: center top;
-  }
-
-  .home-hero {
-    margin-top: 2rem;
-  }
-
-  .homeServices {
-    margin-bottom: 4rem;
-  }
-
-  .homeServices__content {
-    padding: 2rem 1.5rem;
-  }
-
-  .homeServices__title,
-  .homeServices__text {
-    max-width: none;
-  }
-
-  .homeServices__media,
-  .homeServices__image {
-    min-height: 300px;
-  }
-
-  .homeCertifications {
-    padding-top: 3rem;
-    margin-bottom: 4rem;
-  }
-
-  .homeTicker {
-    margin: 0.5rem 0 3rem;
-  }
-
-  .homeTicker__track {
-    animation-duration: 18s;
-  }
-
-  .homeTicker__group {
-    gap: 1rem;
-    padding: 0.85rem 0;
-  }
-
-  .homeTicker__separator {
-    width: 2.25rem;
-  }
-
-  .homeCertifications__panel {
-    padding: 0;
-  }
-
-  .homeCertifications__title,
-  .homeCertifications__text {
-    max-width: none;
-  }
-
-  .testoPresentazione {
-    font-size: 1.05rem;
-  }
-
-  .heroActions {
-    flex-direction: column;
-    align-items: stretch;
-  }
-
-  .linkScopri {
-    width: 100%;
-  }
-
-  .heroHighlight {
-    margin-top: 1rem;
-  }
-
-  .homeStats,
-  .homeSection,
-  .cards-container,
-  .homeGallery {
-    margin-bottom: 3rem;
-  }
-
-  .homeCta {
-    padding: 1.5rem;
-  }
-
-  .homeCtaActions {
-    margin-top: 1rem;
-  }
-
-  .immagine-settore {
-    width: 30%;
-  }
-
-  .about-content {
-    padding-top: 3rem;
-    padding-bottom: 3.5rem;
-  }
-
-  .about-box {
-    padding: 2rem 1.5rem;
-  }
-}
-
-.settore-civile,
-.settore-industriale,
-.settore-militare,
-.settore-terziario {
-  transition: transform 0.35s ease, box-shadow 0.35s ease;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-}
-
-.settore-civile:hover,
-.settore-industriale:hover,
-.settore-militare:hover,
-.settore-terziario:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.08);
+.about-content {
+  max-width: 1180px;
+  padding-top: 4.5rem;
+  padding-bottom: 5rem;
 }
 
 .brochure {
@@ -1209,12 +992,12 @@ div.titolo-pagina-chiSiamo.row {
 .download-brochure {
   display: inline-block;
   font-size: 1.2rem;
-  border: 1px solid black;
   padding: 1.2rem 3rem;
+  border: 1px solid black;
+  border-radius: 0 0 35px 0;
   color: black;
   text-decoration: none;
-  border-radius: 0 0 35px 0;
-  transition: all 0.5s ease;
+  transition: background-color 0.5s ease, color 0.5s ease, border-color 0.5s ease;
 }
 
 .download-brochure:hover {
@@ -1237,7 +1020,7 @@ div.titolo-pagina-chiSiamo.row {
   background-position: center;
   filter: brightness(0.75);
   isolation: isolate;
-  min-height: 50rem;
+  min-height: 30rem;
   padding: 6rem 1.5rem;
 }
 
@@ -1275,7 +1058,7 @@ div.titolo-pagina-chiSiamo.row {
   background-size: cover;
   background-position: center;
   isolation: isolate;
-  min-height: 50rem;
+  min-height: 30rem;
   padding: 6rem 1.5rem;
 }
 
@@ -1396,7 +1179,7 @@ div.titolo-pagina-chiSiamo.row {
   background-size: cover;
   background-position: center;
   isolation: isolate;
-  min-height: 50rem;
+  min-height: 30rem;
   padding: 6rem 1.5rem;
 }
 
