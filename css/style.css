@@ -124,6 +124,55 @@ textarea {
   border-color: white;
 }
 
+.nav-item-dropdown-link {
+  display: flex;
+  align-items: center;
+}
+
+.nav-item-dropdown-link > .nav-link {
+  margin-right: 0;
+  padding-right: 0.35rem !important;
+}
+
+.navbar .dropdown-toggle {
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+  margin: 0 26px 0 0;
+  padding-left: 0.2rem !important;
+  padding-right: 0.7rem !important;
+}
+
+.navbar .dropdown-toggle::after {
+  margin-left: 0.45rem;
+  vertical-align: 0.12em;
+}
+
+.navbar .dropdown-toggle:focus {
+  box-shadow: none;
+}
+
+.navbar .dropdown-menu {
+  background-color: rgba(0, 0, 0, 0.92);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 0;
+  min-width: 13rem;
+  padding: 0.4rem 0;
+}
+
+.navbar .dropdown-item {
+  color: #ffffff;
+  font-weight: 300;
+  padding: 0.7rem 1rem;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+.navbar .dropdown-item:hover,
+.navbar .dropdown-item:focus {
+  color: #ced4da;
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
 @media (min-width: 992px) and (max-width: 1200px) {
   #logoBrand {
     width: 4.8rem;
@@ -136,6 +185,11 @@ textarea {
     padding-left: 0.35rem !important;
     padding-right: 0.35rem !important;
     white-space: nowrap;
+  }
+
+  .navbar .dropdown-toggle {
+    margin-right: 20px;
+    padding-right: 0.35rem !important;
   }
 }
 
@@ -170,6 +224,41 @@ textarea {
     padding: 0.95rem 0 !important;
     text-align: left;
     border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  }
+
+  .offcanvas-lg .nav-item-dropdown-link {
+    display: block;
+  }
+
+  .offcanvas-lg .nav-item-dropdown-link > .nav-link {
+    padding-bottom: 0.4rem !important;
+    border-bottom: 0;
+  }
+
+  .offcanvas-lg .dropdown-toggle {
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 0 0 0.95rem !important;
+    text-align: left;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  }
+
+  .offcanvas-lg .dropdown-toggle::after {
+    float: right;
+    margin-top: 0.5rem;
+  }
+
+  .offcanvas-lg .dropdown-menu {
+    background-color: transparent;
+    border: 0;
+    padding: 0 0 0.5rem 1rem;
+    min-width: 100%;
+  }
+
+  .offcanvas-lg .dropdown-item {
+    padding: 0.65rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   }
 }
 
