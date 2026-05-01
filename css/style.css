@@ -11,7 +11,7 @@
 
 .titolo-principale {
   font-family: "Manrope", sans-serif;
-  font-weight: 900;
+  font-weight: 200;
 }
 
 /******************* ELEMENTI COMUNI NELLE PAGINE *******************/
@@ -938,11 +938,13 @@ div.titolo-pagina-chiSiamo.row {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: url("../res/chi siamo/Immagine Team.jpg");
+  background-image: url("../res/chi-siamo/Immagine Team.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   isolation: isolate;
-  min-height: 30rem;
+  min-height: 50rem;
   padding: 6rem 1.5rem;
 }
 
@@ -974,15 +976,242 @@ div.titolo-pagina-chiSiamo.row {
 
 .logo-itesChiSiamo {
   display: block;
-  max-width: 25%;
+  width: min(230px, 48%);
   height: auto;
   margin: 0 auto;
+  margin-bottom: 2rem;
+}
+
+.presentazioneITES {
+  margin-bottom: 4.5rem;
+}
+
+.faseChiSiamo {
+  margin-bottom: 1rem;
+  font-family: Manrope, sans-serif;
+  font-size: clamp(1.8rem, 1.4vw + 1.2rem, 2.8rem);
+  font-weight: 300;
+  letter-spacing: -0.02em;
+  line-height: 1.12;
+}
+
+.elementor-divider-separatorChiSiamo {
+  display: block;
+  width: min(24rem, 56%);
+  height: 1px;
+  margin: 0 auto 1.75rem;
+  background-color: black;
+}
+
+.testoChiSiamo {
+  max-width: 72ch;
+  margin: 0 auto;
+  font-size: 1.08rem;
+  line-height: 1.8;
+  color: #222222;
+}
+
+.timeLineITES {
+  background-image: url("../res/chi-siamo/ImmagineTimeLine.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.timeline {
+  position: relative;
+}
+
+.timeline--history {
+  width: min(100%, 900px);
+  margin: 3.25rem auto 0;
+  padding-left: 0;
+}
+
+.timeline--history::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 3.5rem;
+  width: 1px;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.16) 0%, rgba(0, 0, 0, 0.8) 100%);
+}
+
+.timeline-item {
+  position: relative;
+  display: grid;
+  grid-template-columns: 6.5rem 1fr;
+  gap: 1.5rem;
+  align-items: start;
+  padding-bottom: 2rem;
+}
+
+.timeline-item:last-child {
+  padding-bottom: 0;
+}
+
+.timeline-icon {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  justify-self: center;
+  min-height: 3rem;
+  min-width: 5.25rem;
+  padding: 0.65rem 0.75rem;
+  background-color: black;
+  color: white;
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.1);
+}
+
+.timeline-content {
+  padding: 1.2rem 1.35rem;
+  border: 1px solid #d9d9d9;
+  background-color: white;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.06);
+}
+
+.timeline-content h3 {
+  margin: 0 0 0.55rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: black;
+}
+
+.timeline-content p {
+  margin: 0;
+  line-height: 1.75;
+  color: #3a3a3a;
+}
+
+.posizione {
+  margin-bottom: 5rem;
+}
+
+.titoloPosizione {
+  margin-top: 0;
+  margin-bottom: 3rem;
+  font-family: "Manrope", sans-serif;
+  font-size: clamp(2rem, 1.2vw + 1.3rem, 3rem);
+  font-weight: 300;
+}
+
+.about-map {
+  margin: 0 auto;
+  overflow: hidden;
+  border: 1px solid #d8d8d8;
+  box-shadow: 0 18px 44px rgba(0, 0, 0, 0.08);
+}
+
+.about-map iframe {
+  display: block;
+  width: 100%;
+  min-height: 460px;
+  border: 0;
+}
+
+.about-contact-info {
+  width: min(100%, 520px);
+  padding: 2.5rem 2.75rem;
+  background-color: white;
+  border: 1px solid #d8d8d8;
+  box-shadow: 0 18px 44px rgba(0, 0, 0, 0.08);
+}
+
+.contact-title {
+  margin: 0 0 1.75rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #dedede;
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.contact-info {
+  margin: 0 0 1rem;
+  font-size: 1.08rem;
+  line-height: 1.8;
+  color: #1f1f1f;
+}
+
+.contact-info:last-child {
+  margin-bottom: 0;
+}
+
+.email-link,
+.numeroTelefonico {
+  color: black;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.email-link:hover,
+.numeroTelefonico:hover {
+  text-decoration: underline;
 }
 
 .about-content {
   max-width: 1180px;
   padding-top: 4.5rem;
   padding-bottom: 5rem;
+}
+
+.valori {
+  position: relative;
+  overflow: hidden;
+  margin-top: 2rem !important;
+  padding: 7rem 2rem;
+  background-image: url("../res/chi-siamo/FotoStazioneElettrica.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.valori::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(0, 0, 0, 0.72) 0%, rgba(0, 0, 0, 0.58) 100%);
+}
+
+.valori .row,
+.valori .col-12 {
+  position: relative;
+  z-index: 1;
+}
+
+.titoloInnovazione {
+  margin: 0;
+  font-size: clamp(2rem, 1.4vw + 1.2rem, 3.25rem);
+  font-weight: 700;
+  line-height: 1.12;
+  color: #ffffff;
+  text-shadow: 0 10px 24px rgba(0, 0, 0, 0.28);
+}
+
+.testoInnovazione {
+  max-width: 62ch;
+  margin: 0 auto;
+  padding: 0 1rem;
+  font-size: 1.08rem;
+  line-height: 1.9;
+  color: rgba(255, 255, 255, 0.92);
+  text-shadow: 0 6px 18px rgba(0, 0, 0, 0.28);
+}
+
+.valori .row.mb-4 {
+  margin-bottom: 1.5rem !important;
+}
+
+.valori .row.mb-5 {
+  margin-bottom: 0 !important;
 }
 
 .brochure {
@@ -1006,6 +1235,67 @@ div.titolo-pagina-chiSiamo.row {
   border-color: white;
 }
 
+@media (max-width: 991.98px) {
+  .about-map {
+    margin-bottom: 2rem;
+  }
+
+  .about-map iframe {
+    min-height: 360px;
+  }
+
+  .about-contact-info {
+    width: 100%;
+    padding: 2rem 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .logo-itesChiSiamo {
+    width: min(220px, 62%);
+  }
+
+  .elementor-divider-separatorChiSiamo {
+    width: min(18rem, 72%);
+  }
+
+  .testoChiSiamo,
+  .contact-info,
+  .testoInnovazione {
+    font-size: 1rem;
+  }
+
+  .valori {
+    padding: 4rem 1.25rem;
+    background-attachment: scroll;
+  }
+
+  .timeline--history {
+    margin-top: 2.5rem;
+    padding-left: 0;
+  }
+
+  .timeline--history::before {
+    left: 1.45rem;
+  }
+
+  .timeline-item {
+    grid-template-columns: 1fr;
+    gap: 0.9rem;
+    padding-left: 2.6rem;
+  }
+
+  .timeline-icon {
+    width: fit-content;
+    min-width: 4.25rem;
+    margin-left: -2.6rem;
+  }
+
+  .timeline-content {
+    padding: 1rem 1.1rem;
+  }
+}
+
 /******************* SERVIZI *******************/
 
 .titolo-pagina-servizi {
@@ -1016,11 +1306,13 @@ div.titolo-pagina-chiSiamo.row {
   justify-content: center;
   --bs-gutter-x: 0;
   background-image: url("../res/servizi/ImmagineServizi.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   filter: brightness(0.75);
   isolation: isolate;
-  min-height: 30rem;
+  min-height: 50rem;
   padding: 6rem 1.5rem;
 }
 
@@ -1055,10 +1347,12 @@ div.titolo-pagina-chiSiamo.row {
   align-items: center;
   justify-content: center;
   background-image: url("../res/certificazioni/ImmagineCertificazioni.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   isolation: isolate;
-  min-height: 30rem;
+  min-height: 50rem;
   padding: 6rem 1.5rem;
 }
 
@@ -1076,15 +1370,18 @@ div.titolo-pagina-chiSiamo.row {
 }
 
 @media (max-width: 768px) {
+  .titolo-pagina-chiSiamo,
   .titolo-pagina-servizi {
     min-height: 32rem;
     padding: 4rem 1.25rem;
+    background-attachment: scroll;
     background-position: center top;
   }
 
   .titolo-paginaCertificazioni {
     min-height: 32rem;
     padding: 4rem 1.25rem;
+    background-attachment: scroll;
     background-position: center top;
   }
 }
@@ -1176,10 +1473,12 @@ div.titolo-pagina-chiSiamo.row {
   justify-content: center;
   --bs-gutter-x: 0;
   background-image: url("../res/lavora-con-noi/ImmagineLavoraConNoi.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   isolation: isolate;
-  min-height: 30rem;
+  min-height: 50rem;
   padding: 6rem 1.5rem;
 }
 
@@ -1518,6 +1817,7 @@ div.titolo-pagina-chiSiamo.row {
   .titolo-pagina {
     min-height: 32rem;
     padding: 4rem 1.25rem;
+    background-attachment: scroll;
     background-position: center top;
   }
 
