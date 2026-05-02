@@ -1979,6 +1979,8 @@ div.titolo-pagina-chiSiamo.row {
 }
 
 .job-opening-card {
+  -webkit-appearance: none;
+  appearance: none;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -1988,7 +1990,9 @@ div.titolo-pagina-chiSiamo.row {
   border: 1px solid black;
   border-radius: 0 0 1.5rem 0;
   background-color: #f8f8f8;
+  color: black;
   text-align: left;
+  cursor: pointer;
   transition: transform 0.25s ease, background-color 0.25s ease, color 0.25s ease, box-shadow 0.25s ease;
 }
 
@@ -2017,6 +2021,11 @@ div.titolo-pagina-chiSiamo.row {
 .job-opening-card__cta {
   margin-top: 0.45rem;
   font-weight: 600;
+}
+
+.job-opening-card:focus-visible {
+  outline: 2px solid black;
+  outline-offset: 3px;
 }
 
 .job-opportunity-modal .modal-content {
@@ -2164,7 +2173,11 @@ div.titolo-pagina-chiSiamo.row {
 }
 
 .contacts-consent .form-check-input {
+  -webkit-appearance: none;
+  appearance: none;
   flex: 0 0 auto;
+  display: inline-grid;
+  place-content: center;
   width: 1.2rem;
   height: 1.2rem;
   margin-top: 0.2rem;
@@ -2182,6 +2195,10 @@ div.titolo-pagina-chiSiamo.row {
 .contacts-consent .form-check-input:checked {
   background-color: black;
   border-color: black;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23ffffff' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M3.5 8.5l2.5 2.5 6-6'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 0.85rem 0.85rem;
 }
 
 .contacts-consent .form-check-label {
@@ -2198,13 +2215,18 @@ div.titolo-pagina-chiSiamo.row {
 }
 
 .invio-mail {
+  -webkit-appearance: none;
+  appearance: none;
   display: inline-block;
   font-size: 1.2rem;
   border: 1px solid black;
   padding: 1.2rem 3rem;
+  background-color: white;
   color: black;
   text-decoration: none;
   border-radius: 0 0 0 35px;
+  text-align: center;
+  cursor: pointer;
   transition: all 0.5s ease;
 }
 
@@ -2223,6 +2245,13 @@ div.titolo-pagina-chiSiamo.row {
   margin: 1rem 0 0;
   font-weight: 600;
   min-height: 1.5rem;
+}
+
+@supports (-webkit-touch-callout: none) {
+  .titolo-paginaLavoraConNoi {
+    background-attachment: scroll;
+    background-position: center top;
+  }
 }
 
 .application-form-status.is-pending {
