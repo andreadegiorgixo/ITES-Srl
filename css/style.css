@@ -1538,12 +1538,11 @@ div.titolo-pagina-chiSiamo.row {
   align-items: center;
   justify-content: center;
   --bs-gutter-x: 0;
-  background-image: url("../res/servizi/ImmagineServizi.jpg");
+  background-image: url("../res/servizi/ImmaginePrincipale.jpg");
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  filter: brightness(0.75);
   isolation: isolate;
   min-height: 50rem;
   padding: 6rem 1.5rem;
@@ -1778,12 +1777,11 @@ div.titolo-pagina-chiSiamo.row {
   align-items: center;
   justify-content: center;
   --bs-gutter-x: 0;
-  background-image: url("../res/servizi/urbani/ImmaginePrincipale.jpg");
+  background-image: url("../res/servizi/ImmaginePrincipale.jpg");
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  filter: brightness(0.75);
   isolation: isolate;
   min-height: 50rem;
   padding: 6rem 1.5rem;
@@ -1963,12 +1961,11 @@ div.titolo-pagina-chiSiamo.row {
   align-items: center;
   justify-content: center;
   --bs-gutter-x: 0;
-  background-image: url("../res/servizi/sicurezza/ImmaginePrincipale.jpg");
+  background-image: url("../res/servizi/ImmaginePrincipale.jpg");
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  filter: brightness(0.75);
   isolation: isolate;
   min-height: 50rem;
   padding: 6rem 1.5rem;
@@ -2095,9 +2092,8 @@ div.titolo-pagina-chiSiamo.row {
   margin: 0 auto 2.5rem;
 }
 
-.security-services-intro__eyebrow {
+.security-services-benefits .security-services-intro__eyebrow {
   margin: 0 0 1rem;
-  color: white;
   font-size: 0.92rem;
   font-weight: 700;
   letter-spacing: 0.18em;
@@ -2106,7 +2102,6 @@ div.titolo-pagina-chiSiamo.row {
 
 .security-services-benefits__title {
   max-width: 16ch;
-  color: white;
 }
 
 .security-services-benefits__list {
@@ -2154,6 +2149,24 @@ div.titolo-pagina-chiSiamo.row {
 .security-services-cta__secondary:hover {
   background-color: black;
   color: white;
+}
+
+/******************* IMPIANTI ELETTRICI *******************/
+
+.titolo-pagina-impianti-elettrici {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("../res/servizi/ImmaginePrincipale.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  isolation: isolate;
+  min-height: 50rem;
+  padding: 6rem 1.5rem;
 }
 
 /******************* CERTIFICAZIONI *******************/
