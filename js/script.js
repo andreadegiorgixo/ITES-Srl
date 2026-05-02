@@ -14,6 +14,53 @@ document.addEventListener("DOMContentLoaded", function () {
   const candidateRoleInput = document.getElementById("candidateRole");
   const jobOpportunityModal = document.getElementById("jobOpportunityModal");
   const jobApplicationSection = document.getElementById("jobApplicationSection");
+  const parallaxSections = document.querySelectorAll(
+    ".titolo-pagina-chiSiamo, .titolo-pagina-servizi, .titolo-pagina-servizi-urbani, .titolo-pagina-servizi-sicurezza, .titolo-pagina-impianti-elettrici, .titolo-paginaCertificazioni, .titolo-paginaLavoraConNoi, .titolo-paginaContatti, .valori, .security-services-benefits"
+  );
+
+  if (parallaxSections.length > 0) {
+    let rafId = null;
+
+    function shouldUseMobileParallax() {
+      return window.matchMedia("(max-width: 1199.98px)").matches;
+    }
+
+    function updateMobileParallax() {
+      rafId = null;
+
+      if (!shouldUseMobileParallax()) {
+        parallaxSections.forEach(function (section) {
+          section.style.removeProperty("--mobile-parallax-offset");
+        });
+        return;
+      }
+
+      const viewportHeight = window.innerHeight || document.documentElement.clientHeight;
+
+      parallaxSections.forEach(function (section) {
+        const rect = section.getBoundingClientRect();
+        const sectionCenter = rect.top + rect.height / 2;
+        const viewportCenter = viewportHeight / 2;
+        const distanceFromCenter = sectionCenter - viewportCenter;
+        const offset = Math.max(Math.min(distanceFromCenter * -0.18, 90), -90);
+
+        section.style.setProperty("--mobile-parallax-offset", offset.toFixed(2) + "px");
+      });
+    }
+
+    function requestParallaxUpdate() {
+      if (rafId !== null) {
+        return;
+      }
+
+      rafId = window.requestAnimationFrame(updateMobileParallax);
+    }
+
+    updateMobileParallax();
+    window.addEventListener("scroll", requestParallaxUpdate, { passive: true });
+    window.addEventListener("resize", requestParallaxUpdate);
+    window.addEventListener("orientationchange", requestParallaxUpdate);
+  }
 
   if (logo) {
     logo.addEventListener("click", function () {

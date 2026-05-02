@@ -1081,6 +1081,7 @@ div.titolo-pagina-chiSiamo.row {
 .titolo-pagina-chiSiamo {
   position: relative;
   overflow: hidden;
+  --mobile-parallax-offset: 0px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1257,6 +1258,7 @@ div.titolo-pagina-chiSiamo.row {
 .valori {
   position: relative;
   overflow: hidden;
+  --mobile-parallax-offset: 0px;
   margin-top: 2rem !important;
   padding: 7rem 2rem;
   background-image: url("../res/chi-siamo/FotoStazioneElettrica.jpg");
@@ -1389,6 +1391,7 @@ div.titolo-pagina-chiSiamo.row {
 .titolo-pagina-servizi {
   position: relative;
   overflow: hidden;
+  --mobile-parallax-offset: 0px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1628,6 +1631,7 @@ div.titolo-pagina-chiSiamo.row {
 .titolo-pagina-servizi-urbani {
   position: relative;
   overflow: hidden;
+  --mobile-parallax-offset: 0px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1812,6 +1816,7 @@ div.titolo-pagina-chiSiamo.row {
 .titolo-pagina-servizi-sicurezza {
   position: relative;
   overflow: hidden;
+  --mobile-parallax-offset: 0px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1933,6 +1938,7 @@ div.titolo-pagina-chiSiamo.row {
 }
 
 .security-services-benefits {
+  --mobile-parallax-offset: 0px;
   margin: 0 auto 5rem;
   background-image: url(../res/servizi/sicurezza/ImmaginePlanimetria.jpg);
   background-attachment: fixed;
@@ -2011,6 +2017,7 @@ div.titolo-pagina-chiSiamo.row {
 .titolo-pagina-impianti-elettrici {
   position: relative;
   overflow: hidden;
+  --mobile-parallax-offset: 0px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2195,6 +2202,7 @@ div.titolo-pagina-chiSiamo.row {
 .titolo-paginaCertificazioni {
   position: relative;
   overflow: hidden;
+  --mobile-parallax-offset: 0px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2292,6 +2300,7 @@ div.titolo-pagina-chiSiamo.row {
 .titolo-paginaLavoraConNoi {
   position: relative;
   overflow: hidden;
+  --mobile-parallax-offset: 0px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2624,7 +2633,7 @@ div.titolo-pagina-chiSiamo.row {
 @supports (-webkit-touch-callout: none) {
   .titolo-paginaLavoraConNoi {
     background-attachment: scroll;
-    background-position: center top;
+    background-position: center calc(50% + var(--mobile-parallax-offset));
   }
 }
 
@@ -2655,6 +2664,7 @@ div.titolo-pagina-chiSiamo.row {
 .titolo-paginaContatti {
   position: relative;
   overflow: hidden;
+  --mobile-parallax-offset: 0px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2894,7 +2904,8 @@ iframe {
   .valori,
   .security-services-benefits {
     background-attachment: scroll;
-    background-position: center top;
+    background-position: center calc(50% + var(--mobile-parallax-offset));
+    transition: background-position 0.08s linear;
   }
 }
 
