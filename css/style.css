@@ -11,7 +11,7 @@
 
 .titolo-principale {
   font-family: "Manrope", sans-serif;
-  font-weight: 200;
+  font-weight: 400;
 }
 
 /******************* ELEMENTI COMUNI NELLE PAGINE *******************/
@@ -1204,7 +1204,7 @@ div.titolo-pagina-chiSiamo.row {
 
 .about-title-main {
   color: white;
-  font-size: clamp(3.2rem, 6vw, 4.8rem);
+  font-size: 5rem;
 }
 
 .elementor-divider-separatorTitoloChiSiamo {
