@@ -502,6 +502,7 @@ footer li,
 .eyebrowHome {
   margin-bottom: 1rem;
   color: #5f5f5f;
+  align-self: center;
 }
 
 .titoloPresentazione {
@@ -515,6 +516,7 @@ footer li,
   max-width: 22ch;
   margin-left: auto;
   margin-right: auto;
+  align-self: center;
 }
 
 .elementor-divider-separator {
@@ -640,15 +642,15 @@ footer li,
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
-  text-align: left;
+  align-items: center;
+  text-align: center;
 }
 
 .homeServices__title,
 .homeServices__text {
-  margin-left: 0;
-  margin-right: 0;
-  text-align: left;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
 }
 
 .homeServices__title {
@@ -656,12 +658,129 @@ footer li,
 }
 
 .homeServices__divider {
-  margin: 0 0 1.75rem;
+  margin: 0 auto 1.75rem;
+  align-self: center;
 }
 
 .homeServices__text {
   max-width: 56ch;
   margin-top: 0;
+  align-self: center;
+}
+
+.homeServices__sectors {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1.5rem;
+  width: min(100%, 84rem);
+  margin-top: 1.4rem;
+}
+
+.homeServiceSectorCard {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  border: 1px solid #d8d8d8;
+  background-color: #ffffff;
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+}
+
+.homeServiceSectorCard__media {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1.5rem 0;
+  background:
+    radial-gradient(circle at center, rgba(15, 39, 79, 0.08) 0%, rgba(15, 39, 79, 0) 70%);
+}
+
+.homeServiceSectorCard__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 6.25rem;
+  height: 6.25rem;
+  border-radius: 999px;
+  background: linear-gradient(180deg, #111111 0%, #222222 100%);
+  color: #ffffff;
+  font-size: 2.35rem;
+  box-shadow: 0 16px 30px rgba(0, 0, 0, 0.22);
+  user-select: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.homeServiceSectorCard:hover .homeServiceSectorCard__icon {
+  animation: homeServicePulse 1s ease-out;
+  box-shadow: 0 18px 36px rgba(0, 0, 0, 0.28);
+}
+
+@keyframes homeServicePulse {
+  0% {
+    transform: scale(1);
+  }
+
+  35% {
+    transform: scale(1.08);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.homeServiceSectorCard__body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.85rem 1.35rem 1.6rem;
+  text-align: center;
+}
+
+.homeServiceSectorCard__title {
+  margin: 0;
+  min-height: 3.2rem;
+  font-size: clamp(1.35rem, 0.8vw + 1.05rem, 1.9rem);
+  font-weight: 700;
+  line-height: 1.15;
+  color: #0f274f;
+}
+
+.homeServiceSectorCard__divider {
+  display: block;
+  width: 5.5rem;
+  height: 4px;
+  margin: 1rem auto 1.15rem;
+  background-color: #111111;
+}
+
+.homeServiceSectorCard__text {
+  margin: 0;
+  color: #4f4f4f;
+  line-height: 1.7;
+}
+
+.homeServiceSectorCard__link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 9.5rem;
+  margin-top: 2rem;
+  padding: 0.9rem 1.2rem;
+  border: 1px solid #d8d8d8;
+  background-color: #f4f4f4;
+  color: #111111;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+}
+
+.homeServiceSectorCard__link:hover {
+  background-color: #111111;
+  border-color: #111111;
+  color: #ffffff;
 }
 
 .homeServices__list {
@@ -673,6 +792,25 @@ footer li,
 
 .homeServices__actions {
   margin-bottom: 0;
+  justify-content: center;
+}
+
+@media (max-width: 767.98px) {
+  .homeServices__sectors {
+    grid-template-columns: 1fr;
+  }
+
+  .homeServiceSectorCard__icon {
+    width: 5.5rem;
+    height: 5.5rem;
+    font-size: 2rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199.98px) {
+  .homeServices__sectors {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 .homeServices__media {
@@ -1349,6 +1487,7 @@ div.titolo-pagina-chiSiamo.row {
 
   .valori {
     padding: 4rem 1.25rem;
+    background-attachment: scroll;
   }
 
   .brochure {
@@ -1666,12 +1805,14 @@ div.titolo-pagina-chiSiamo.row {
   .titolo-pagina-servizi {
     min-height: 32rem;
     padding: 4rem 1.25rem;
+    background-attachment: scroll;
     background-position: center top;
   }
 
   .titolo-paginaCertificazioni {
     min-height: 32rem;
     padding: 4rem 1.25rem;
+    background-attachment: scroll;
     background-position: center top;
   }
 
@@ -2107,15 +2248,10 @@ div.titolo-pagina-chiSiamo.row {
 }
 
 @media (max-width: 768px) {
-  .titolo-paginaLavoraConNoi {
-    min-height: 32rem;
-    padding: 4rem 1.25rem;
-    background-position: center top;
-  }
-
   .titolo-pagina {
     min-height: 32rem;
     padding: 4rem 1.25rem;
+    background-attachment: scroll;
     background-position: center top;
   }
 
@@ -2177,32 +2313,6 @@ div.titolo-pagina-chiSiamo.row {
 }
 
 .titolo-paginaContatti .col {
-  position: relative;
-  z-index: 1;
-}
-
-.titolo-pagina {
-  position: relative;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  --bs-gutter-x: 0;
-  background: linear-gradient(180deg, #161616 0%, #000000 100%);
-  isolation: isolate;
-  min-height: 50rem;
-  padding: 6rem 1.5rem;
-}
-
-.titolo-pagina::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.14) 0%, rgba(0, 0, 0, 0.34) 100%);
-  z-index: -1;
-}
-
-.titolo-pagina .col {
   position: relative;
   z-index: 1;
 }
@@ -2328,6 +2438,7 @@ div.titolo-pagina-chiSiamo.row {
   .titolo-paginaContatti {
     min-height: 32rem;
     padding: 4rem 1.25rem;
+    background-attachment: scroll;
     background-position: center top;
   }
 
@@ -2362,349 +2473,5 @@ div.titolo-pagina-chiSiamo.row {
 
   .contact-showcase__grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-}
-
-/******************* RESPONSIVE SYSTEM *******************/
-
-html {
-  overflow-x: clip;
-  scroll-padding-top: 6rem;
-}
-
-body {
-  overflow-x: clip;
-}
-
-img,
-video,
-iframe {
-  max-width: 100%;
-}
-
-main,
-section,
-.row,
-.col,
-[class*="col-"] {
-  min-width: 0;
-}
-
-.navbar {
-  padding: 0.65rem 0;
-}
-
-.navbar .container-fluid {
-  width: min(100%, 1440px);
-  padding-inline: clamp(1rem, 2vw, 2rem);
-}
-
-#logoBrand {
-  width: clamp(4.25rem, 5vw, 6rem);
-  margin: 0;
-}
-
-.offcanvas-header #logoBrand {
-  width: clamp(4.25rem, 18vw, 5.25rem);
-}
-
-.video {
-  height: min(100svh, 62rem);
-  min-height: 30rem;
-}
-
-.videoHero__line {
-  max-height: none;
-  font-size: clamp(2rem, 5vw, 4.9rem);
-  letter-spacing: clamp(0.3rem, 1vw, 1rem);
-}
-
-.titoloPresentazione,
-.services-showcase__title,
-.contact-card__title,
-.brochure-title,
-.titoloInnovazione {
-  overflow-wrap: anywhere;
-}
-
-.services-page-main,
-.contact-page-main,
-.about-content,
-.container-home {
-  width: min(100%, 1440px);
-}
-
-.contact-showcase__grid,
-.services-showcase__grid,
-.site-footer__inner,
-.job-openings {
-  min-width: 0;
-}
-
-.contact-card,
-.services-showcase-card,
-.timeline-content,
-.application-form-wrapper,
-.cookie-banner__content {
-  min-width: 0;
-}
-
-.valueCard,
-.valueCard__image {
-  min-height: clamp(18rem, 42vw, 28rem);
-  height: clamp(18rem, 42vw, 28rem);
-}
-
-.contact-map-section__frame {
-  height: clamp(22rem, 48vw, 34rem);
-}
-
-.application-form-wrapper {
-  width: min(100%, 1040px);
-}
-
-.contacts-consent {
-  align-items: flex-start;
-}
-
-@media (min-width: 1200px) {
-  .site-footer__inner {
-    grid-template-columns: 1.1fr 1.2fr 0.8fr;
-  }
-
-  .services-showcase__grid {
-    max-width: 70rem;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 1199.98px) {
-  .navbar .container-fluid {
-    padding-inline: 1.25rem;
-  }
-
-  .nav-link {
-    margin: 0 0.85rem;
-  }
-
-  .navbar .dropdown-toggle {
-    margin-right: 0.85rem;
-  }
-
-  .site-footer__inner {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 2rem;
-  }
-
-  .home-hero {
-    margin-top: 2.25rem;
-  }
-
-  .titoloPresentazione {
-    font-size: clamp(2.35rem, 4vw, 3rem);
-  }
-
-  .testoPresentazione,
-  .services-showcase__text,
-  .testoChiSiamo,
-  .testoInnovazione,
-  .brochure-text,
-  .contact-card__text {
-    font-size: 1.02rem;
-  }
-
-  .services-showcase {
-    padding-block: 5rem;
-  }
-
-  .services-showcase__grid {
-    max-width: 100%;
-    gap: 1.35rem;
-  }
-
-  .services-showcase-card {
-    padding: 2.1rem 1.5rem 1.8rem;
-  }
-
-  .contact-showcase {
-    padding-block: 4.5rem;
-  }
-
-  .contact-showcase__grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 0;
-  }
-
-  .contact-card {
-    padding: 2.35rem 1.8rem 1.9rem;
-    border-right: 1px solid rgba(0, 0, 0, 0.217);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
-  }
-
-  .contact-card:nth-child(2n) {
-    border-right: 0;
-  }
-
-  .contact-card:last-child {
-    grid-column: 1 / -1;
-    border-bottom: 0;
-  }
-
-  .job-openings {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
-
-@media (max-width: 991.98px) {
-  .offcanvas-lg {
-    width: min(86vw, 360px) !important;
-  }
-}
-
-@media (max-width: 767.98px) {
-  html {
-    scroll-padding-top: 5rem;
-  }
-
-  .navbar .container-fluid {
-    padding-inline: 1rem;
-  }
-
-  #logoBrand {
-    width: clamp(4rem, 22vw, 4.9rem);
-  }
-
-  .video {
-    min-height: 26rem;
-  }
-
-  .videoHero__overlay {
-    gap: 0.45rem;
-    padding: 1.25rem;
-  }
-
-  .videoHero__line {
-    font-size: clamp(1.6rem, 8vw, 2.5rem);
-    letter-spacing: 0.18rem;
-  }
-
-  .titoloPresentazione {
-    font-size: clamp(2rem, 8vw, 2.5rem);
-  }
-
-  .testoPresentazione {
-    font-size: 1rem;
-  }
-
-  .linkScopri,
-  .download-brochure,
-  .invio-mail {
-    width: 100%;
-    padding-inline: 1.25rem;
-  }
-
-  .homeGallery {
-    padding-block: 3rem;
-  }
-
-  .homeStats {
-    margin-bottom: 3rem;
-  }
-
-  .homeServices {
-    margin-bottom: 4rem;
-  }
-
-  .homeServices__content,
-  .homeServices__title,
-  .homeServices__text {
-    text-align: center;
-    align-items: center;
-  }
-
-  .homeServices__divider {
-    margin-inline: auto;
-  }
-
-  .site-footer__inner {
-    grid-template-columns: 1fr;
-  }
-
-  .site-footer__brand,
-  .site-footer__section {
-    text-align: left;
-  }
-
-  .services-showcase,
-  .contact-showcase {
-    padding-block: 4rem;
-  }
-
-  .services-showcase__title {
-    font-size: clamp(1.95rem, 7vw, 2.45rem);
-  }
-
-  .services-showcase__text {
-    font-size: 1rem;
-  }
-
-  .contact-showcase__grid {
-    box-shadow: none;
-    border: 1px solid #e7e7e7;
-  }
-
-  .contact-card {
-    padding: 1.75rem 1.25rem;
-  }
-
-  .contact-card__title {
-    font-size: clamp(1.7rem, 8vw, 2.1rem);
-  }
-
-  .contact-card__link {
-    font-size: 1.1rem;
-    padding-top: 1.4rem;
-  }
-
-  .application-form-wrapper {
-    padding: 1.25rem;
-  }
-
-  .contacts-consent {
-    gap: 0.7rem;
-    padding: 0.9rem 1rem;
-  }
-
-  .job-openings {
-    grid-template-columns: 1fr;
-  }
-
-  .job-opening-card {
-    padding: 1.15rem 1.1rem;
-  }
-}
-
-@media (max-height: 540px) and (orientation: landscape) {
-  .video {
-    height: 100svh;
-    min-height: 22rem;
-  }
-
-  .videoHero__overlay {
-    gap: 0.35rem;
-    padding: 1rem;
-  }
-
-  .videoHero__line {
-    font-size: clamp(1.35rem, 5vw, 2.1rem);
-    letter-spacing: 0.22rem;
-  }
-
-  .titolo-pagina-chiSiamo,
-  .titolo-pagina-servizi,
-  .titolo-paginaCertificazioni,
-  .titolo-paginaLavoraConNoi,
-  .titolo-paginaContatti {
-    min-height: 24rem;
-    padding: 5rem 1.25rem 3rem;
   }
 }

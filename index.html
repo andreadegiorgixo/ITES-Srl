@@ -37,7 +37,7 @@
       <div class="offcanvas offcanvas-lg offcanvas-end" tabindex="-1" id="navbarNavDropdown"
         aria-labelledby="navbarNavDropdownLabel">
         <div class="offcanvas-header d-lg-none">
-          <img src="res/Brend Logo.jpg" alt="Logo ITES" id="logoBrand" class="img-fluid" style="max-height: 50px" />
+          <img src="/res/Brend Logo.jpg" alt="Logo ITES" id="logoBrand" class="img-fluid" style="max-height: 50px" />
           <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
         <div class="offcanvas-body">
@@ -124,7 +124,7 @@
   <section class="homeGallery">
     <div class="row g-0 homeGallery__row">
       <div class="col-12 col-lg-4 p-0">
-        <a href="html/chi-siamo.html">
+        <a href="/html/chi-siamo.html">
           <article class="valueCard">
             <img src="res/index/Immagine 1.jpg" alt="Lavori realizzati con attenzione e precisione"
               class="valueCard__image" />
@@ -137,7 +137,7 @@
       </div>
 
       <div class="col-12 col-lg-4 p-0">
-        <a href="html/servizi.html">
+        <a href="/html/servizi.html">
           <article class="valueCard">
             <img src="res/index/Immagine 2.jpg" alt="Interventi eseguiti con competenza tecnica"
               class="valueCard__image" />
@@ -150,7 +150,7 @@
       </div>
 
       <div class="col-12 col-lg-4 p-0">
-        <a href="html/certificazioni.html">
+        <a href="/html/certificazioni.html">
           <article class="valueCard">
             <img src="res/index/Immagine 3.jpg" alt="Collaborazione e coordinamento sul campo"
               class="valueCard__image" />
@@ -170,18 +170,62 @@
         <div class="homeServices__content">
           <p class="eyebrowHome">Servizi</p>
           <h2 class="titoloPresentazione homeServices__title">Cosa Offriamo?</h2>
-          <span class="elementor-divider-separator homeServices__divider"></span>
+          <span class="elementor-divider-separator homeServices__divider text-center"></span>
           <p class="testoPresentazione homeServices__text">
             ITES realizza impianti elettrici, fotovoltaici, sistemi di videosorveglianza, antincendio e soluzioni
             specialistiche per il settore civile, industriale e pubblico.
           </p>
-          <div class="homeServices__list" aria-label="Principali servizi ITES">
-            <span class="sectorPill">Impianti elettrici</span>
-            <span class="sectorPill">Fotovoltaico</span>
-            <span class="sectorPill">Videosorveglianza</span>
-            <span class="sectorPill">Impianti Semaforici</span>
-            <span class="sectorPill">Impianti di condizionamento</span>
+
+          <div class="homeServices__sectors" aria-label="Settori di servizio ITES">
+            <article class="homeServiceSectorCard">
+              <div class="homeServiceSectorCard__media">
+                <span class="material-symbols-outlined homeServiceSectorCard__icon">shield</span>
+              </div>
+              <div class="homeServiceSectorCard__body">
+                <h3 class="homeServiceSectorCard__title">Sicurezza</h3>
+                <span class="homeServiceSectorCard__divider"></span>
+                <p class="homeServiceSectorCard__text">Sistemi per protezione, controllo accessi e monitoraggio.</p>
+                <a href="html/servizi.html" class="homeServiceSectorCard__link">Scopri</a>
+              </div>
+            </article>
+
+            <article class="homeServiceSectorCard">
+              <div class="homeServiceSectorCard__media">
+                <span class="material-symbols-outlined homeServiceSectorCard__icon">traffic</span>
+              </div>
+              <div class="homeServiceSectorCard__body">
+                <h3 class="homeServiceSectorCard__title">Urbani</h3>
+                <span class="homeServiceSectorCard__divider"></span>
+                <p class="homeServiceSectorCard__text">Interventi dedicati a viabilita e infrastrutture pubbliche.</p>
+                <a href="html/servizi.html" class="homeServiceSectorCard__link">Scopri</a>
+              </div>
+            </article>
+
+            <article class="homeServiceSectorCard">
+              <div class="homeServiceSectorCard__media">
+                <span class="material-symbols-outlined homeServiceSectorCard__icon">bolt</span>
+              </div>
+              <div class="homeServiceSectorCard__body">
+                <h3 class="homeServiceSectorCard__title">Impianti Elettrici</h3>
+                <span class="homeServiceSectorCard__divider"></span>
+                <p class="homeServiceSectorCard__text">Soluzioni per distribuzione, energia e impiantistica tecnica.</p>
+                <a href="html/servizi.html" class="homeServiceSectorCard__link">Scopri</a>
+              </div>
+            </article>
+
+            <article class="homeServiceSectorCard">
+              <div class="homeServiceSectorCard__media">
+                <span class="material-symbols-outlined homeServiceSectorCard__icon">mode_fan</span>
+              </div>
+              <div class="homeServiceSectorCard__body">
+                <h3 class="homeServiceSectorCard__title">Comfort &amp; Clima</h3>
+                <span class="homeServiceSectorCard__divider"></span>
+                <p class="homeServiceSectorCard__text">Benessere ambientale e climatizzazione per ogni spazio.</p>
+                <a href="html/servizi.html" class="homeServiceSectorCard__link">Scopri</a>
+              </div>
+            </article>
           </div>
+
           <div class="heroActions homeServices__actions">
             <a href="html/servizi.html" class="linkScopri">Scopri tutti i servizi</a>
           </div>
@@ -194,7 +238,7 @@
   <footer class="site-footer">
     <div class="container site-footer__inner">
       <div class="site-footer__brand">
-        <img src="res/Brend Logo.jpg" alt="Logo ITES" class="site-footer__logo-image" />
+        <img src="/res/Brend Logo.jpg" alt="Logo ITES" class="site-footer__logo-image" />
         <p class="site-footer__tagline">Information Technology And Electrical System</p>
       </div>
 
@@ -210,7 +254,7 @@
         </ul>
       </div>
 
-      <div class="site-footer__section">
+      <div class="site_footer__section">
         <h5 class="site-footer__title">Link</h5>
         <ul class="site-footer__list list-unstyled">
           <li><a href="html/chi-siamo.html" class="footer-link">Chi siamo</a></li>
