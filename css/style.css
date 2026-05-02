@@ -129,7 +129,7 @@ textarea {
   align-items: center;
 }
 
-.nav-item-dropdown-link > .nav-link {
+.nav-item-dropdown-link>.nav-link {
   margin-right: 0;
   padding-right: 0.35rem !important;
 }
@@ -233,7 +233,7 @@ textarea {
     border-bottom: 1px solid rgba(255, 255, 255, 0.12);
   }
 
-  .offcanvas-lg .nav-item-dropdown-link > .nav-link {
+  .offcanvas-lg .nav-item-dropdown-link>.nav-link {
     flex: 1;
     padding-bottom: 0.95rem !important;
     border-bottom: 0;
@@ -1954,6 +1954,207 @@ div.titolo-pagina-chiSiamo.row {
   color: white;
 }
 
+/******************* SICUREZZA *******************/
+
+.titolo-pagina-servizi-sicurezza {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  --bs-gutter-x: 0;
+  background-image: url("../res/servizi/sicurezza/ImmaginePrincipale.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  filter: brightness(0.75);
+  isolation: isolate;
+  min-height: 50rem;
+  padding: 6rem 1.5rem;
+}
+
+.titolo-pagina-servizi-sicurezza::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.28) 0%, rgba(0, 0, 0, 0.48) 100%);
+  z-index: -1;
+}
+
+.titolo-pagina-servizi-sicurezza .col {
+  position: relative;
+  z-index: 1;
+}
+
+.security-services-page {
+  padding-inline: 1.5rem;
+}
+
+.security-services-intro {
+  max-width: 64rem;
+  margin: 0 auto;
+  padding: 6rem 0 4rem;
+}
+
+.security-services-intro__eyebrow,
+.security-services-cta__eyebrow {
+  margin: 0 0 1rem;
+  color: #5f5f5f;
+  font-size: 0.92rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.security-services-intro__title,
+.security-services-benefits__title,
+.security-services-cta__title {
+  margin: 0 auto;
+  color: black;
+  font-size: clamp(2.2rem, 2.2vw + 1.2rem, 4rem);
+  font-weight: 700;
+  line-height: 1.12;
+}
+
+.security-services-intro__title {
+  max-width: 18ch;
+}
+
+.security-services-intro__text,
+.security-services-cta__text {
+  max-width: 60ch;
+  margin: 1.8rem auto 0;
+  color: #444444;
+  font-size: 1.08rem;
+  line-height: 1.9;
+}
+
+.security-services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.6rem;
+  margin: 0 auto 5rem;
+}
+
+.security-service-card,
+.security-benefit-card {
+  height: 100%;
+  border: 1px solid #dddddd;
+  background-color: #fbfbfb;
+}
+
+.security-service-card {
+  padding: 2.2rem 2rem;
+  text-align: left;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.06);
+}
+
+.security-service-card__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 4rem;
+  height: 4rem;
+  margin-bottom: 1.3rem;
+  border-radius: 999px;
+  background: linear-gradient(180deg, #000000 0%, #252525 100%);
+  color: white;
+  font-size: 1.8rem;
+  user-select: none;
+}
+
+.security-service-card__title,
+.security-benefit-card__title {
+  margin: 0;
+  color: #0f274f;
+  font-size: 1.55rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.security-service-card__text,
+.security-benefit-card__text {
+  margin: 1rem 0 0;
+  color: #4f4f4f;
+  line-height: 1.8;
+}
+
+.security-services-benefits {
+  margin: 0 auto 5rem;
+  background-image: url(../res/servizi/sicurezza/ImmaginePlanimetria.jpg);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 6rem 1.5rem;
+}
+
+.security-services-benefits__intro {
+  max-width: 54rem;
+  margin: 0 auto 2.5rem;
+}
+
+.security-services-intro__eyebrow {
+  margin: 0 0 1rem;
+  color: white;
+  font-size: 0.92rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.security-services-benefits__title {
+  max-width: 16ch;
+  color: white;
+}
+
+.security-services-benefits__list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.4rem;
+}
+
+.security-benefit-card {
+  padding: 1.9rem 1.75rem;
+}
+
+.security-benefit-card__number {
+  display: inline-block;
+  margin-bottom: 1rem;
+  color: #8a8a8a;
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+}
+
+.security-services-cta {
+  margin: 0 auto 5rem;
+  padding: 3.5rem 2rem;
+  border: 1px solid #d8d8d8;
+  background:
+    radial-gradient(circle at top left, rgba(0, 0, 0, 0.06) 0, rgba(0, 0, 0, 0) 34%),
+    linear-gradient(135deg, #ffffff 0%, #f2f2f2 100%);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.08);
+}
+
+.security-services-cta__title {
+  max-width: 16ch;
+}
+
+.security-services-cta__actions {
+  margin-bottom: 0;
+}
+
+.security-services-cta__secondary {
+  background-color: white;
+  color: black;
+}
+
+.security-services-cta__secondary:hover {
+  background-color: black;
+  color: white;
+}
 
 /******************* CERTIFICAZIONI *******************/
 
@@ -1987,6 +2188,7 @@ div.titolo-pagina-chiSiamo.row {
 }
 
 @media (max-width: 768px) {
+
   .titolo-pagina-chiSiamo,
   .titolo-pagina-servizi {
     min-height: 32rem;
@@ -2027,6 +2229,13 @@ div.titolo-pagina-chiSiamo.row {
     background-position: center top;
   }
 
+  .titolo-pagina-servizi-sicurezza {
+    min-height: 32rem;
+    padding: 4rem 1.25rem;
+    background-attachment: scroll;
+    background-position: center top;
+  }
+
   .urban-services-intro {
     padding: 4rem 0 3rem;
   }
@@ -2039,6 +2248,21 @@ div.titolo-pagina-chiSiamo.row {
   .urban-service-card,
   .urban-benefit-card,
   .urban-services-cta {
+    padding: 2rem 1.4rem;
+  }
+
+  .security-services-intro {
+    padding: 4rem 0 3rem;
+  }
+
+  .security-services-grid,
+  .security-services-benefits__list {
+    grid-template-columns: 1fr;
+  }
+
+  .security-service-card,
+  .security-benefit-card,
+  .security-services-cta {
     padding: 2rem 1.4rem;
   }
 }
