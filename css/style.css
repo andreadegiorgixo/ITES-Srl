@@ -3129,18 +3129,25 @@ iframe {
     align-items: stretch;
   }
 
+  .offcanvas-lg .nav-item {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  }
+
+  .offcanvas-lg .nav-item-dropdown-link:has(.dropdown-menu.show) {
+    border-bottom: 0;
+  }
+
   .offcanvas-lg .nav-link {
     margin: 0;
     padding: 0.95rem 0 !important;
     text-align: left;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    border-bottom: 0;
   }
 
   .offcanvas-lg .nav-item-dropdown-link {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
   }
 
   .offcanvas-lg .nav-item-dropdown-link>.nav-link {
@@ -3174,7 +3181,6 @@ iframe {
 
   .offcanvas-lg .dropdown-item {
     padding: 0.65rem 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   }
 
   .videoHero__overlay {
@@ -3267,10 +3273,18 @@ iframe {
     align-items: stretch;
   }
 
+  .offcanvas-lg .nav-item {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  }
+
+  .offcanvas-lg .nav-item-dropdown-link:has(.dropdown-menu.show) {
+    border-bottom: 0;
+  }
+
   .offcanvas-lg .nav-link,
   .offcanvas-lg .dropdown-toggle {
     margin: 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    border-bottom: 0;
   }
 
   .offcanvas-lg .nav-link {
@@ -3311,7 +3325,6 @@ iframe {
 
   .offcanvas-lg .dropdown-item {
     padding: 0.65rem 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   }
 
   .video {
@@ -3581,10 +3594,18 @@ iframe {
     align-items: stretch;
   }
 
+  .offcanvas-lg .nav-item {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  }
+
+  .offcanvas-lg .nav-item-dropdown-link:has(.dropdown-menu.show) {
+    border-bottom: 0;
+  }
+
   .offcanvas-lg .nav-link,
   .offcanvas-lg .dropdown-toggle {
     margin: 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    border-bottom: 0;
   }
 
   .offcanvas-lg .nav-link {
@@ -3625,7 +3646,6 @@ iframe {
 
   .offcanvas-lg .dropdown-item {
     padding: 0.6rem 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   }
 
   .video {
