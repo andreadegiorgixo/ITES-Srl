@@ -69,7 +69,14 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   if (siteNavbar) {
+    const disableTransparentNavbar = document.body.classList.contains("policy-page");
+
     function syncNavbarOnScroll() {
+      if (disableTransparentNavbar) {
+        siteNavbar.classList.add("navbar-scrolled");
+        return;
+      }
+
       siteNavbar.classList.toggle("navbar-scrolled", window.scrollY > 0);
     }
 

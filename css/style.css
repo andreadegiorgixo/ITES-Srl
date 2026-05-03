@@ -105,7 +105,7 @@ figcaption {
 }
 
 .navbar.navbar-scrolled {
-  background-color: rgb(0, 0, 0) !important;
+  background-color: rgba(0, 0, 0, 0.95) !important;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
 }
 
