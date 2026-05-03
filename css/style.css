@@ -302,6 +302,13 @@ figcaption {
   margin: 0;
 }
 
+.site-footer__contacts li {
+  display: grid;
+  grid-template-columns: 5.5rem minmax(0, 1fr);
+  gap: 0.35rem 0.75rem;
+  align-items: start;
+}
+
 .site-footer__list li {
   margin-bottom: 1rem;
   line-height: 1.7;
@@ -309,17 +316,36 @@ figcaption {
 }
 
 .site-footer__label {
-  display: inline-block;
-  min-width: 5.5rem;
-  margin-right: 0.35rem;
+  display: block;
+  min-width: 0;
+  margin-right: 0;
   font-weight: 700;
   color: rgba(255, 255, 255, 0.58);
+}
+
+.site-footer__value {
+  display: block;
+  min-width: 0;
+}
+
+.site-footer__value--address {
+  max-width: 16rem;
 }
 
 .site-footer__phone {
   display: inline-block;
   font-size: 1.1rem;
   font-weight: 700;
+}
+
+.site-footer__divider {
+  width: 100%;
+  margin-top: 2.75rem;
+}
+
+.site-footer__divider-separator {
+  width: min(100%, 78rem);
+  background-color: rgba(255, 255, 255, 0.32);
 }
 
 .cookie-banner {
