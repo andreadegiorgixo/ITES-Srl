@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="../../res/favicon.svg" type="image/svg+xml" class="logoSito" />
+
+  <title>Comfort</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+  <link rel="stylesheet" href="../../css/style.css" />
+</head>
+
+<body>
+  <nav class="navbar sticky-top bg-body-tertiary navbar-expand-lg navbar-light" id="siteNavbar">
+    <div class="container-fluid">
+      <a class="navbar-brand d-flex align-items-center" href="../../index.html">
+        <img src="../../res/Brend Logo.jpg" alt="Logo ITES" id="logoBrand" class="img-fluid" style="max-height: 50px" />
+      </a>
+
+      <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="offcanvas"
+        data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="custom-toggler-line"></span>
+        <span class="custom-toggler-line"></span>
+        <span class="custom-toggler-line"></span>
+      </button>
+
+      <div class="offcanvas offcanvas-lg offcanvas-end" tabindex="-1" id="navbarNavDropdown"
+        aria-labelledby="navbarNavDropdownLabel">
+        <div class="offcanvas-header d-lg-none">
+          <img src="../../res/Brend Logo.jpg" alt="Logo ITES" id="logoBrand" class="img-fluid"
+            style="max-height: 50px" />
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="../../index.html">Home</a>
+            </li>
+            <li class="nav-item dropdown nav-item-dropdown-link">
+              <a class="nav-link" href="../../html/chi-siamo.html">Chi siamo</a>
+              <button class="nav-link dropdown-toggle dropdown-toggle-split" type="button" data-bs-toggle="dropdown"
+                aria-expanded="false" aria-label="Apri menu Chi siamo"></button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="../../html/contatti.html">Contattaci</a></li>
+                <li><a class="dropdown-item" href="../../html/certificazioni.html">Certificazioni</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../../html/servizi.html">Servizi</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../../html/lavora-con-noi.html">Lavora con noi</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="titolo-pagina-servizi row align-items-center">
+    <div class="col">
+      <h1 class="titolo-principale about-title-main text-center">
+        COMFORT & CLIMA
+      </h1>
+      <span class="elementor-divider-separatorTitoloChiSiamo"></span>
+    </div>
+  </div>
+
+  <main class="container comfort-services-page">
+    <section class="comfort-services-intro text-center">
+      <p class="comfort-services-intro__eyebrow"><a href="../../html/servizi.html"
+          style="text-decoration: none; color: black;">Servizi</a> / Comfort &amp; Clima</p>
+      <h2 class="comfort-services-intro__title">
+        Impianti pensati per il benessere degli ambienti.
+      </h2>
+      <p class="comfort-services-intro__text">
+        ITES realizza soluzioni dedicate al comfort climatico di abitazioni, uffici e spazi
+        professionali. Progettiamo impianti con attenzione a efficienza, qualita dell'aria,
+        continuita di funzionamento e facilita di gestione.
+      </p>
+    </section>
+
+    <section class="comfort-services-grid" aria-label="Aree di intervento comfort e clima">
+      <article class="comfort-service-card">
+        <span class="material-symbols-outlined comfort-service-card__icon">ac_unit</span>
+        <h3 class="comfort-service-card__title">Climatizzazione</h3>
+        <p class="comfort-service-card__text">
+          Sistemi per il controllo della temperatura in ambienti residenziali e di lavoro,
+          con soluzioni adatte a nuove installazioni e adeguamenti.
+        </p>
+      </article>
+
+      <article class="comfort-service-card">
+        <span class="material-symbols-outlined comfort-service-card__icon">air</span>
+        <h3 class="comfort-service-card__title">Ventilazione e ricambio aria</h3>
+        <p class="comfort-service-card__text">
+          Impianti per migliorare salubrita e distribuzione dell'aria, con attenzione
+          al comfort quotidiano e alla qualita degli ambienti interni.
+        </p>
+      </article>
+
+      <article class="comfort-service-card">
+        <span class="material-symbols-outlined comfort-service-card__icon">tune</span>
+        <h3 class="comfort-service-card__title">Regolazione e controllo</h3>
+        <p class="comfort-service-card__text">
+          Configurazione di sistemi per gestione, programmazione e ottimizzazione dei parametri
+          climatici in base alle esigenze del contesto.
+        </p>
+      </article>
+    </section>
+
+    <section class="comfort-services-benefits">
+      <div class="comfort-services-benefits__intro text-center">
+        <p class="comfort-services-intro__eyebrow">Approccio</p>
+        <h2 class="comfort-services-benefits__title">Come sviluppiamo un impianto comfort &amp; clima</h2>
+      </div>
+
+      <div class="comfort-services-benefits__list">
+        <article class="comfort-benefit-card">
+          <span class="comfort-benefit-card__number">01</span>
+          <h3 class="comfort-benefit-card__title">Analisi degli ambienti</h3>
+          <p class="comfort-benefit-card__text">Valutiamo volumi, utilizzo degli spazi e obiettivi di comfort.</p>
+        </article>
+
+        <article class="comfort-benefit-card">
+          <span class="comfort-benefit-card__number">02</span>
+          <h3 class="comfort-benefit-card__title">Scelta della soluzione</h3>
+          <p class="comfort-benefit-card__text">Definiamo impianto, distribuzione e logiche di regolazione piu adatte.
+          </p>
+        </article>
+
+        <article class="comfort-benefit-card">
+          <span class="comfort-benefit-card__number">03</span>
+          <h3 class="comfort-benefit-card__title">Installazione e messa in servizio</h3>
+          <p class="comfort-benefit-card__text">Eseguiamo posa, configurazione e test per verificare prestazioni e
+            continuita.</p>
+        </article>
+
+        <article class="comfort-benefit-card">
+          <span class="comfort-benefit-card__number">04</span>
+          <h3 class="comfort-benefit-card__title">Assistenza e ottimizzazione</h3>
+          <p class="comfort-benefit-card__text">Supportiamo l'impianto nel tempo per mantenere efficienza e benessere
+            ambientale.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="comfort-services-cta text-center">
+      <span class="comfort-services-cta__eyebrow">Vuoi approfondire?</span>
+      <h2 class="comfort-services-cta__title">Parliamo della soluzione piu adatta ai tuoi ambienti</h2>
+      <p class="comfort-services-cta__text">
+        Se stai valutando un impianto per climatizzazione, ventilazione o regolazione del comfort,
+        possiamo aiutarti a individuare la configurazione piu adatta al tuo progetto.
+      </p>
+      <div class="heroActions comfort-services-cta__actions">
+        <a href="../../html/contatti.html" class="linkScopri">Contattaci</a>
+        <a href="../../html/servizi.html" class="linkScopri comfort-services-cta__secondary">Torna ai servizi</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <div class="site-footer__brand">
+        <img src="../../res/Brend Logo.jpg" alt="Logo ITES" class="site-footer__logo-image" />
+        <p class="site-footer__tagline">Information Technology And Electrical System</p>
+      </div>
+
+      <div class="site-footer__section">
+        <h5 class="site-footer__title">Contatti</h5>
+        <ul class="site-footer__list list-unstyled">
+          <li><span class="site-footer__label">Indirizzo</span> Viale Magna Grecia, 144 - 74121 Taranto (TA)</li>
+          <li><span class="site-footer__label">Email</span> <a href="mailto:info@ites-srl.it"
+              class="footer-link">info@ites-srl.it</a></li>
+          <li><span class="site-footer__label">P.IVA</span> 03191760739</li>
+          <li><span class="site-footer__label">Telefono</span> <a href="tel:+393496164584"
+              class="site-footer__phone footer-link">+39 349 616 4584</a></li>
+        </ul>
+      </div>
+
+      <div class="site-footer__section">
+        <h5 class="site-footer__title">Link Utili</h5>
+        <ul class="site-footer__list list-unstyled">
+          <li><a href="../../html/lavora-con-noi.html" class="footer-link">Lavora con noi</a></li>
+          <li><a href="../../html/contatti.html" class="footer-link">Contattaci</a></li>
+        </ul>
+      </div>
+
+      <div class="site-footer__section">
+        <h5 class="site-footer__title">About Us</h5>
+        <ul class="site-footer__list list-unstyled">
+          <li><a href="../../html/chi-siamo.html" class="footer-link">Chi siamo</a></li>
+          <li><a href="../../html/servizi.html" class="footer-link">Servizi</a></li>
+          <li><a href="../../html/certificazioni.html" class="footer-link">Certificazioni</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <script src="../../js/script.js"></script>
+</body>
+
+</html>

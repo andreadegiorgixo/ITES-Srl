@@ -2012,6 +2012,162 @@ div.titolo-pagina-chiSiamo.row {
   color: white;
 }
 
+/******************* COMFORT & CLIMA *******************/
+
+.comfort-services-page {
+  padding-inline: 1.5rem;
+}
+
+.comfort-services-intro {
+  max-width: 64rem;
+  margin: 0 auto;
+  padding: 6rem 0 4rem;
+}
+
+.comfort-services-intro__eyebrow,
+.comfort-services-cta__eyebrow {
+  margin: 0 0 1rem;
+  color: #5f5f5f;
+  font-size: 0.92rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.comfort-services-intro__title,
+.comfort-services-benefits__title,
+.comfort-services-cta__title {
+  margin: 0 auto;
+  color: black;
+  font-size: clamp(2.2rem, 2.2vw + 1.2rem, 4rem);
+  font-weight: 700;
+  line-height: 1.12;
+}
+
+.comfort-services-intro__title {
+  max-width: 16ch;
+}
+
+.comfort-services-intro__text,
+.comfort-services-cta__text {
+  max-width: 60ch;
+  margin: 1.8rem auto 0;
+  color: #444444;
+  font-size: 1.08rem;
+  line-height: 1.9;
+}
+
+.comfort-services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.6rem;
+  margin: 0 auto 5rem;
+}
+
+.comfort-service-card,
+.comfort-benefit-card {
+  height: 100%;
+  border: 1px solid #dddddd;
+  background-color: #fbfbfb;
+}
+
+.comfort-service-card {
+  padding: 2.2rem 2rem;
+  text-align: left;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.06);
+}
+
+.comfort-service-card__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 4rem;
+  height: 4rem;
+  margin-bottom: 1.3rem;
+  border-radius: 999px;
+  background: linear-gradient(180deg, #000000 0%, #252525 100%);
+  color: white;
+  font-size: 1.8rem;
+  user-select: none;
+}
+
+.comfort-service-card__title,
+.comfort-benefit-card__title {
+  margin: 0;
+  color: #0f274f;
+  font-size: 1.55rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.comfort-service-card__text,
+.comfort-benefit-card__text {
+  margin: 1rem 0 0;
+  color: #4f4f4f;
+  line-height: 1.8;
+}
+
+.comfort-services-benefits {
+  margin: 0 auto 5rem;
+  padding: 3.5rem 2rem;
+}
+
+.comfort-services-benefits__intro {
+  max-width: 54rem;
+  margin: 0 auto 2.5rem;
+}
+
+.comfort-services-benefits__title {
+  max-width: 16ch;
+}
+
+.comfort-services-benefits__list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.4rem;
+}
+
+.comfort-benefit-card {
+  padding: 1.9rem 1.75rem;
+}
+
+.comfort-benefit-card__number {
+  display: inline-block;
+  margin-bottom: 1rem;
+  color: #8a8a8a;
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+}
+
+.comfort-services-cta {
+  margin: 0 auto 5rem;
+  padding: 3.5rem 2rem;
+  border: 1px solid #d8d8d8;
+  background:
+    radial-gradient(circle at bottom right, rgba(0, 0, 0, 0.06) 0, rgba(0, 0, 0, 0) 34%),
+    linear-gradient(135deg, #ffffff 0%, #f2f2f2 100%);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.08);
+}
+
+.comfort-services-cta__title {
+  max-width: 16ch;
+}
+
+.comfort-services-cta__actions {
+  margin-bottom: 0;
+}
+
+.comfort-services-cta__secondary {
+  background-color: white;
+  color: black;
+}
+
+.comfort-services-cta__secondary:hover {
+  background-color: black;
+  color: white;
+}
+
 /******************* IMPIANTI ELETTRICI *******************/
 
 .titolo-pagina-impianti-elettrici {
@@ -2830,6 +2986,8 @@ iframe {
 .urban-services-benefits__list,
 .security-services-grid,
 .security-services-benefits__list,
+.comfort-services-grid,
+.comfort-services-benefits__list,
 .electrical-services-grid,
 .electrical-services-benefits__list,
 .contact-showcase__grid,
@@ -3005,6 +3163,7 @@ iframe {
   .services-showcase__grid,
   .urban-services-benefits__list,
   .security-services-benefits__list,
+  .comfort-services-benefits__list,
   .electrical-services-benefits__list,
   .job-openings {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -3012,6 +3171,7 @@ iframe {
 
   .urban-services-grid,
   .security-services-grid,
+  .comfort-services-grid,
   .electrical-services-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -3124,6 +3284,7 @@ iframe {
   .services-page-main,
   .urban-services-page,
   .security-services-page,
+  .comfort-services-page,
   .electrical-services-page,
   .contact-page-main {
     padding-left: 1.25rem;
@@ -3143,6 +3304,8 @@ iframe {
   .urban-services-cta__text,
   .security-services-intro__text,
   .security-services-cta__text,
+  .comfort-services-intro__text,
+  .comfort-services-cta__text,
   .electrical-services-intro__text,
   .electrical-services-cta__text {
     font-size: 1rem;
@@ -3190,6 +3353,8 @@ iframe {
   .urban-services-benefits__list,
   .security-services-grid,
   .security-services-benefits__list,
+  .comfort-services-grid,
+  .comfort-services-benefits__list,
   .electrical-services-grid,
   .electrical-services-benefits__list,
   .contact-showcase__grid,
@@ -3204,6 +3369,9 @@ iframe {
   .security-service-card,
   .security-benefit-card,
   .security-services-cta,
+  .comfort-service-card,
+  .comfort-benefit-card,
+  .comfort-services-cta,
   .electrical-service-card,
   .electrical-benefit-card,
   .electrical-services-cta,
@@ -3252,6 +3420,7 @@ iframe {
   .brochure,
   .urban-services-cta,
   .security-services-cta,
+  .comfort-services-cta,
   .electrical-services-cta,
   .application-form-wrapper {
     padding: 2rem 1.35rem;
@@ -3434,6 +3603,7 @@ iframe {
   .services-page-main,
   .urban-services-page,
   .security-services-page,
+  .comfort-services-page,
   .electrical-services-page,
   .contact-page-main,
   .container {
@@ -3460,6 +3630,8 @@ iframe {
   .urban-services-cta__text,
   .security-services-intro__text,
   .security-services-cta__text,
+  .comfort-services-intro__text,
+  .comfort-services-cta__text,
   .electrical-services-intro__text,
   .electrical-services-cta__text,
   .contact-card__text,
@@ -3497,6 +3669,7 @@ iframe {
   .brochure,
   .urban-services-cta,
   .security-services-cta,
+  .comfort-services-cta,
   .electrical-services-cta,
   .application-form-wrapper {
     padding-left: 1.15rem;
@@ -3509,6 +3682,8 @@ iframe {
   .urban-services-benefits__list,
   .security-services-grid,
   .security-services-benefits__list,
+  .comfort-services-grid,
+  .comfort-services-benefits__list,
   .electrical-services-grid,
   .electrical-services-benefits__list,
   .contact-showcase__grid,
@@ -3531,6 +3706,7 @@ iframe {
   .services-showcase__intro,
   .urban-services-benefits__intro,
   .security-services-benefits__intro,
+  .comfort-services-benefits__intro,
   .electrical-services-benefits__intro,
   .contact-showcase__intro {
     margin-bottom: 2.5rem;
@@ -3541,6 +3717,8 @@ iframe {
   .urban-benefit-card,
   .security-service-card,
   .security-benefit-card,
+  .comfort-service-card,
+  .comfort-benefit-card,
   .electrical-service-card,
   .electrical-benefit-card,
   .contact-card {
