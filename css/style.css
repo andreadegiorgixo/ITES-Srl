@@ -97,7 +97,7 @@ figcaption {
   left: 0;
   width: 100%;
   background-color: transparent !important;
-  padding: 10px 20px;
+  padding: 0px 20px;
   align-items: center;
   transition: background-color 0.25s ease, box-shadow 0.25s ease;
   z-index: 1030;
