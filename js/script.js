@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
+  const reducedMotionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
   const logo = document.getElementById("logoBrand");
   const siteNavbar = document.getElementById("siteNavbar");
   const cookieBanner = document.getElementById("cookieBanner");
@@ -17,6 +18,106 @@ document.addEventListener("DOMContentLoaded", function () {
   const parallaxSections = document.querySelectorAll(
     ".titolo-pagina-chiSiamo, .titolo-pagina-servizi, .titolo-pagina-servizi-urbani, .titolo-pagina-servizi-sicurezza, .titolo-pagina-impianti-elettrici, .titolo-paginaCertificazioni, .titolo-paginaLavoraConNoi, .titolo-paginaContatti, .valori, .security-services-benefits"
   );
+
+  function setupScrollReveals() {
+    const revealElements = [];
+
+    function registerReveal(element, effect, delay) {
+      if (!element || element.dataset.revealConfigured === "true") {
+        return;
+      }
+
+      element.dataset.reveal = effect || "up";
+      element.dataset.revealConfigured = "true";
+
+      if (typeof delay === "number" && delay > 0) {
+        element.style.setProperty("--reveal-delay", delay + "ms");
+      }
+
+      revealElements.push(element);
+    }
+
+    function registerSelector(selector, effect) {
+      document.querySelectorAll(selector).forEach(function (element) {
+        registerReveal(element, effect, 0);
+      });
+    }
+
+    function registerGroup(parentSelector, childSelector, effect, stagger) {
+      document.querySelectorAll(parentSelector).forEach(function (parent) {
+        parent.querySelectorAll(childSelector).forEach(function (child, index) {
+          registerReveal(child, effect, (stagger || 0) * index);
+        });
+      });
+    }
+
+    registerGroup(".videoHero__overlay", ".videoHero__line", "up", 90);
+    registerGroup(".home-hero", ".titoloPresentazione, .elementor-divider, .testoPresentazione, .heroActions", "up", 100);
+    registerGroup(".homeStats", ".statCard", "up", 90);
+    registerGroup(".homeGallery__row", ".valueCard", "scale", 100);
+    registerGroup(".homeServices__content", ".eyebrowHome, .homeServices__title, .homeServices__divider, .homeServices__text, .homeServices__actions", "up", 90);
+    registerGroup(".homeServices__sectors", ".homeServiceSectorCard", "up", 100);
+
+    registerSelector(".titolo-pagina-chiSiamo .about-hero, .titolo-pagina-servizi .col, .titolo-pagina-servizi-urbani .col, .titolo-pagina-servizi-sicurezza .col, .titolo-pagina-impianti-elettrici .col, .titolo-paginaCertificazioni .col, .titolo-paginaLavoraConNoi .col, .titolo-paginaContatti .col", "up");
+    registerGroup(".presentazioneITES", ".row:first-child, .elementor-divider-separatorChiSiamo, .row:last-child", "up", 100);
+    registerGroup(".timeline--history", ".timeline-item", "left", 70);
+    registerGroup(".valori", ".row, .cards-container", "up", 110);
+    registerGroup(".cards-container", ".col-12", "up", 90);
+
+    registerSelector(".services-showcase__intro, .contact-showcase__intro, .paragrafo, .contact-map-section, .formContatti, .presentazione-lavoro > .titolo2, .job-board-intro, .job-board-note, .lavora-con-noi-form-section > .titolo2, .application-form-wrapper, .security-services-intro, .urban-services-intro, .electrical-services-intro, .comfort-services-intro, .security-services-benefits__intro, .urban-services-benefits__intro, .electrical-services-benefits__intro, .comfort-services-benefits__intro", "up");
+    registerGroup(".services-showcase__grid", ".services-showcase-card", "up", 100);
+    registerGroup(".contact-showcase__grid", ".contact-card", "up", 90);
+    registerGroup(".job-openings", ".job-opening-card", "up", 100);
+    registerGroup(".containerCertificazioni", ".certificazione", "scale", 100);
+    registerGroup(".security-services-grid", ".security-service-card", "up", 90);
+    registerGroup(".urban-services-grid", ".urban-service-card", "up", 90);
+    registerGroup(".electrical-services-grid", ".electrical-service-card", "up", 90);
+    registerGroup(".comfort-services-grid", ".comfort-service-card", "up", 90);
+    registerGroup(".security-services-benefits__list", ".security-benefit-card", "up", 90);
+    registerGroup(".urban-services-benefits__list", ".urban-benefit-card", "up", 90);
+    registerGroup(".electrical-services-benefits__list", ".electrical-benefit-card", "up", 90);
+    registerGroup(".comfort-services-benefits__list", ".comfort-benefit-card", "up", 90);
+    registerGroup(".security-services-cta", ".security-services-cta__eyebrow, .security-services-cta__title, .security-services-cta__text, .security-services-cta__actions", "up", 90);
+    registerGroup(".urban-services-cta", ".urban-services-cta__eyebrow, .urban-services-cta__title, .urban-services-cta__text, .urban-services-cta__actions", "up", 90);
+    registerGroup(".electrical-services-cta", ".electrical-services-cta__eyebrow, .electrical-services-cta__title, .electrical-services-cta__text, .electrical-services-cta__actions", "up", 90);
+    registerGroup(".comfort-services-cta", ".comfort-services-cta__eyebrow, .comfort-services-cta__title, .comfort-services-cta__text, .comfort-services-cta__actions", "up", 90);
+    registerGroup(".site-footer__inner", ".site-footer__brand, .site-footer__section", "up", 90);
+    registerSelector(".site-footer__divider", "up");
+
+    if (revealElements.length === 0) {
+      return;
+    }
+
+    document.documentElement.classList.add("reveal-ready");
+
+    if (reducedMotionQuery.matches || !("IntersectionObserver" in window)) {
+      revealElements.forEach(function (element) {
+        element.classList.add("is-visible");
+      });
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      function (entries) {
+        entries.forEach(function (entry) {
+          if (!entry.isIntersecting) {
+            return;
+          }
+
+          entry.target.classList.add("is-visible");
+          observer.unobserve(entry.target);
+        });
+      },
+      {
+        threshold: 0.2,
+        rootMargin: "0px 0px -8% 0px",
+      }
+    );
+
+    revealElements.forEach(function (element) {
+      observer.observe(element);
+    });
+  }
 
   if (parallaxSections.length > 0) {
     let rafId = null;
@@ -292,4 +393,6 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   }
+
+  setupScrollReveals();
 });
